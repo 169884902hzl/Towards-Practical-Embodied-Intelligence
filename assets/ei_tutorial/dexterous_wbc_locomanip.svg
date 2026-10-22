@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 540" width="100%" height="100%" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <rect width="1200" height="540" fill="#FFFFFF"/>
+
+  <!-- Header -->
+  <text x="600" y="36" text-anchor="middle" font-size="20" font-weight="800" fill="#0f172a">High-DoF Dexterous Hand Manipulation &amp; Humanoid Whole-Body Loco-Manipulation (WBC)</text>
+  <text x="600" y="58" text-anchor="middle" font-size="13" fill="#475569">Hierarchical Control Decomposition: From High-Level Semantic VLA/WAM Planning to 500–1000 Hz Whole-Body &amp; Finger Torque Tracking</text>
+
+  <!-- Left Panel: 20+ DoF Anthropomorphic Dexterous Manipulation -->
+  <rect x="35" y="80" width="550" height="430" rx="10" fill="#f8fafc" stroke="#2563eb" stroke-width="2"/>
+  <rect x="35" y="80" width="550" height="38" rx="10" fill="#2563eb"/>
+  <text x="310" y="104" text-anchor="middle" font-size="13.5" font-weight="700" fill="#ffffff">(a) 20+ DoF Anthropomorphic Dexterous Manipulation</text>
+
+  <rect x="55" y="134" width="510" height="110" rx="7" fill="#ffffff" stroke="#bfdbfe"/>
+  <text x="70" y="156" font-size="12" font-weight="700" fill="#1e40af">1. Curse of Dimensionality &amp; Multi-Contact Physics (u in R^{22..28}):</text>
+  <text x="78" y="176" font-size="10.5" fill="#334155">• Parallel gripper (1-DoF) relies on stable cage grasps; 5-finger hands</text>
+  <text x="86" y="192" font-size="10" fill="#475569">(Shadow, Allegro, LEAP, SharpaWave) make/break 5–15 contacts/second.</text>
+  <text x="78" y="212" font-size="10.5" fill="#334155">• Grasp Wrench Matrix G(q) must satisfy friction cone constraints:</text>
+  <text x="86" y="230" font-size="10.5" font-weight="700" fill="#1d4ed8">w_obj = G(q) f_contact,   sqrt(f_t1^2 + f_t2^2) &lt;= mu * f_normal</text>
+
+  <rect x="55" y="258" width="510" height="112" rx="7" fill="#eff6ff" stroke="#93c5fd"/>
+  <text x="70" y="280" font-size="12" font-weight="700" fill="#1e3a8a">2. Dexterous Data Collection &amp; Kinematic Retargeting:</text>
+  <text x="78" y="300" font-size="10.5" fill="#334155">• DexCap (RSS 2024) &amp; DexUMI (2025): Wearable electromagnetic/exoskeleton</text>
+  <text x="86" y="316" font-size="10" fill="#475569">capture of in-the-wild human fingertip poses + wrist SLAM trajectories.</text>
+  <text x="78" y="336" font-size="10.5" fill="#334155">• DexMimicGen (2024): Automated simulation trajectory synthesis for</text>
+  <text x="86" y="352" font-size="10" fill="#475569">coordinated bimanual + 24-DoF dexterous hands.</text>
+
+  <rect x="55" y="384" width="510" height="108" rx="7" fill="#ffffff" stroke="#bfdbfe"/>
+  <text x="70" y="406" font-size="12" font-weight="700" fill="#1e40af">3. Tactile-Guided In-Hand Reorientation &amp; Assembly (PRISM, 2026):</text>
+  <text x="78" y="426" font-size="10.5" fill="#334155">• Point-cloud + fingertip array (3D-ViTac / AnySkin) resolves severe</text>
+  <text x="86" y="442" font-size="10" fill="#475569">visual self-occlusion by fingers during precision screw/clip insertion.</text>
+  <text x="78" y="464" font-size="10.5" font-weight="700" fill="#059669">• Synergy eigengrasp prior + 100Hz tactile residual flow head</text>
+
+  <!-- Right Panel: Whole-Body Loco-Manipulation Control (WBC) -->
+  <rect x="615" y="80" width="550" height="430" rx="10" fill="#f8fafc" stroke="#059669" stroke-width="2"/>
+  <rect x="615" y="80" width="550" height="38" rx="10" fill="#059669"/>
+  <text x="890" y="104" text-anchor="middle" font-size="13.5" font-weight="700" fill="#ffffff">(b) Whole-Body Loco-Manipulation Control (WBC, 30–50+ DoF)</text>
+
+  <rect x="635" y="134" width="510" height="110" rx="7" fill="#ffffff" stroke="#a7f3d0"/>
+  <text x="650" y="156" font-size="12" font-weight="700" fill="#065f46">1. Floating-Base Coupled Dynamics &amp; Null-Space Projection:</text>
+  <text x="658" y="176" font-size="10.5" fill="#334155">• Mobile bimanual &amp; humanoid systems couple base/leg locomotion with</text>
+  <text x="666" y="192" font-size="10" fill="#475569">torso pitch/yaw and dual 7-DoF arms to expand manipulation workspace.</text>
+  <text x="658" y="212" font-size="10.5" font-weight="700" fill="#047857">• Task-Priority Null-Space:  dq = J_1^+ dx_1 + (I - J_1^+ J_1) J_2^+ dx_2</text>
+  <text x="666" y="228" font-size="10" fill="#334155">(Task 1: Balance/CoM &amp; EE tracking; Task 2: Joint limit &amp; posture)</text>
+
+  <rect x="635" y="258" width="510" height="112" rx="7" fill="#ecfdf5" stroke="#6ee7b7"/>
+  <text x="650" y="280" font-size="12" font-weight="700" fill="#064e3b">2. Hierarchical VLA + RL Whole-Body Trackers (2024–2026 SOTA):</text>
+  <text x="658" y="300" font-size="10.5" fill="#334155">• Upper Layer (10–30 Hz): GR00T N1.5 / VioLA / SONIC generates upper-body</text>
+  <text x="666" y="316" font-size="10" fill="#475569">end-effector SE(3) trajectories, root velocity, and torso height commands.</text>
+  <text x="658" y="336" font-size="10.5" fill="#334155">• Lower Layer (500 Hz): HOVER (2024) / BeyondMimic (2025) / ASAP (2025)</text>
+  <text x="666" y="352" font-size="10" font-weight="600" fill="#047857">RL whole-body policy outputs joint PD targets maintaining ZMP stability.</text>
+
+  <rect x="635" y="384" width="510" height="108" rx="7" fill="#ffffff" stroke="#a7f3d0"/>
+  <text x="650" y="406" font-size="12" font-weight="700" fill="#065f46">3. Sim-to-Real Physics Alignment (ASAP, RSS 2025):</text>
+  <text x="658" y="426" font-size="10.5" fill="#334155">• Stage 1: Train agile whole-body motion tracker inIsaac Lab / Newton.</text>
+  <text x="658" y="444" font-size="10.5" fill="#334155">• Stage 2: Train Delta-Action residual dynamics model on real humanoid</text>
+  <text x="666" y="460" font-size="10" fill="#475569">rollouts to bridge actuator friction, delay, and foot contact mismatch.</text>
+</svg>

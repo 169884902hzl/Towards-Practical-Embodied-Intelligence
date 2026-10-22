@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 914" width="100%" height="100%" font-family="Arial, sans-serif">
+<rect width="1200" height="100%" fill="#FFFFFF"/>
+<text x="600" y="36" font-size="23" font-weight="700" fill="#0f172a" text-anchor="middle">Seven routes for post-training generative robot policies</text>
+<text x="600" y="64" font-size="14.5" fill="#475569" text-anchor="middle">Taxonomy follows the tutorial table; route numbers are editorial categories, not paper claims</text>
+<rect x="40.0" y="90.0" width="544.0" height="172" rx="10" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.5"/>
+<rect x="40.0" y="90.0" width="544.0" height="36" rx="10" fill="#2563eb"/>
+<text x="56.0" y="114" font-size="16.5" font-weight="700" fill="#ffffff" text-anchor="start">1. Denoising-chain MDP</text>
+<text x="56.0" y="150" font-size="15.5" fill="#1e293b" text-anchor="start">DPPO</text>
+<text x="56.0" y="176" font-size="15.5" fill="#1e293b" text-anchor="start">Optimize tractable stochastic denoising transitions.</text>
+<rect x="600.0" y="90.0" width="544.0" height="172" rx="10" fill="#f0fdfa" stroke="#99f6e4" stroke-width="1.5"/>
+<rect x="600.0" y="90.0" width="544.0" height="36" rx="10" fill="#0d9488"/>
+<text x="616.0" y="114" font-size="16.5" font-weight="700" fill="#ffffff" text-anchor="start">2. Stochastic flow transitions</text>
+<text x="616.0" y="150" font-size="15.5" fill="#1e293b" text-anchor="start">ReinFlow / pi_RL / RLinf</text>
+<text x="616.0" y="176" font-size="15.5" fill="#1e293b" text-anchor="start">Noise makes discrete conditional transitions tractable.</text>
+<rect x="40.0" y="280.0" width="544.0" height="172" rx="10" fill="#f5f3ff" stroke="#ddd6fe" stroke-width="1.5"/>
+<rect x="40.0" y="280.0" width="544.0" height="36" rx="10" fill="#7c3aed"/>
+<text x="56.0" y="304" font-size="16.5" font-weight="700" fill="#ffffff" text-anchor="start">3. Forward-process surrogate</text>
+<text x="56.0" y="340" font-size="15.5" fill="#1e293b" text-anchor="start">RoboFFT</text>
+<text x="56.0" y="366" font-size="15.5" fill="#1e293b" text-anchor="start">Use a training surrogate; do not call it an exact</text>
+<text x="56.0" y="387" font-size="15.5" fill="#1e293b" text-anchor="start">marginal likelihood.</text>
+<rect x="600.0" y="280.0" width="544.0" height="172" rx="10" fill="#fffbeb" stroke="#fde68a" stroke-width="1.5"/>
+<rect x="600.0" y="280.0" width="544.0" height="36" rx="10" fill="#d97706"/>
+<text x="616.0" y="304" font-size="16.5" font-weight="700" fill="#ffffff" text-anchor="start">4. Noise-space steering</text>
+<text x="616.0" y="340" font-size="15.5" fill="#1e293b" text-anchor="start">DSRL / NSL</text>
+<text x="616.0" y="366" font-size="15.5" fill="#1e293b" text-anchor="start">Adapt the initial noise interface of a frozen base</text>
+<text x="616.0" y="387" font-size="15.5" fill="#1e293b" text-anchor="start">policy.</text>
+<rect x="40.0" y="470.0" width="544.0" height="172" rx="10" fill="#ecfdf5" stroke="#a7f3d0" stroke-width="1.5"/>
+<rect x="40.0" y="470.0" width="544.0" height="36" rx="10" fill="#059669"/>
+<text x="56.0" y="494" font-size="16.5" font-weight="700" fill="#ffffff" text-anchor="start">5. Residual / selective heads</text>
+<text x="56.0" y="530" font-size="15.5" fill="#1e293b" text-anchor="start">ResFiT / RL Token</text>
+<text x="56.0" y="556" font-size="15.5" fill="#1e293b" text-anchor="start">Train a residual or compact readout on a base policy.</text>
+<rect x="600.0" y="470.0" width="544.0" height="172" rx="10" fill="#fff1f2" stroke="#fecdd3" stroke-width="1.5"/>
+<rect x="600.0" y="470.0" width="544.0" height="36" rx="10" fill="#e11d48"/>
+<text x="616.0" y="494" font-size="16.5" font-weight="700" fill="#ffffff" text-anchor="start">6. Advantage / value conditioning</text>
+<text x="616.0" y="530" font-size="15.5" fill="#1e293b" text-anchor="start">RECAP / VaM</text>
+<text x="616.0" y="556" font-size="15.5" fill="#1e293b" text-anchor="start">Condition generation or post-training on value</text>
+<text x="616.0" y="577" font-size="15.5" fill="#1e293b" text-anchor="start">information.</text>
+<rect x="40.0" y="660.0" width="544.0" height="172" rx="10" fill="#f0f9ff" stroke="#bae6fd" stroke-width="1.5"/>
+<rect x="40.0" y="660.0" width="544.0" height="36" rx="10" fill="#0284c7"/>
+<text x="56.0" y="684" font-size="16.5" font-weight="700" fill="#ffffff" text-anchor="start">7. Actor-critic action improvement</text>
+<text x="56.0" y="720" font-size="15.5" fill="#1e293b" text-anchor="start">PA-RL</text>
+<text x="56.0" y="746" font-size="15.5" fill="#1e293b" text-anchor="start">Separate critic-guided action improvement from policy</text>
+<text x="56.0" y="767" font-size="15.5" fill="#1e293b" text-anchor="start">fitting.</text>
+<text x="600" y="876" font-size="14" fill="#475569" text-anchor="middle">Sources and scope: docs/02_VLA_WAM_and_Flow_RL.md, core chapter A; exact titles in references.bib.</text>
+</svg>

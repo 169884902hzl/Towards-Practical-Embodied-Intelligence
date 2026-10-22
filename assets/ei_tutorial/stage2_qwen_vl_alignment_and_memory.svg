@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 363" width="100%" height="100%" font-family="Arial, sans-serif">
+<rect width="1200" height="100%" fill="#FFFFFF"/>
+<text x="600" y="36" font-size="23" font-weight="700" fill="#0f172a" text-anchor="middle">Qwen-RobotManip and REKI: distinct evidence</text>
+<text x="600" y="64" font-size="14.5" fill="#475569" text-anchor="middle">Architectural details must follow each paper; these are not a shared Qwen3.5 specification</text>
+<rect x="40.0" y="90.0" width="357.3" height="191" rx="10" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.5"/>
+<rect x="40.0" y="90.0" width="357.3" height="36" rx="10" fill="#2563eb"/>
+<text x="56.0" y="114" font-size="16.5" font-weight="700" fill="#ffffff" text-anchor="start">Qwen-RobotManip</text>
+<text x="56.0" y="150" font-size="15.5" fill="#1e293b" text-anchor="start">Built on Qwen-VL; aligns</text>
+<text x="56.0" y="171" font-size="15.5" fill="#1e293b" text-anchor="start">representation, motion and</text>
+<text x="56.0" y="192" font-size="15.5" fill="#1e293b" text-anchor="start">behavior.</text>
+<text x="56.0" y="218" font-size="15.5" fill="#1e293b" text-anchor="start">Uses a curated mixture of public</text>
+<text x="56.0" y="239" font-size="15.5" fill="#1e293b" text-anchor="start">robot data and human videos.</text>
+<rect x="413.3" y="90.0" width="357.3" height="191" rx="10" fill="#f0fdfa" stroke="#99f6e4" stroke-width="1.5"/>
+<rect x="413.3" y="90.0" width="357.3" height="36" rx="10" fill="#0d9488"/>
+<text x="429.3333333333333" y="114" font-size="16.5" font-weight="700" fill="#ffffff" text-anchor="start">REKI</text>
+<text x="429.3333333333333" y="150" font-size="15.5" fill="#1e293b" text-anchor="start">2.4B VLA with a flow-matching</text>
+<text x="429.3333333333333" y="171" font-size="15.5" fill="#1e293b" text-anchor="start">action expert.</text>
+<text x="429.3333333333333" y="197" font-size="15.5" fill="#1e293b" text-anchor="start">Persistent expert-cache registers</text>
+<text x="429.3333333333333" y="218" font-size="15.5" fill="#1e293b" text-anchor="start">summarize recent VLM features.</text>
+<rect x="786.7" y="90.0" width="357.3" height="191" rx="10" fill="#f5f3ff" stroke="#ddd6fe" stroke-width="1.5"/>
+<rect x="786.7" y="90.0" width="357.3" height="36" rx="10" fill="#7c3aed"/>
+<text x="802.6666666666666" y="114" font-size="16.5" font-weight="700" fill="#ffffff" text-anchor="start">Evidence boundary</text>
+<text x="802.6666666666666" y="150" font-size="15.5" fill="#1e293b" text-anchor="start">Do not infer a fixed 3:1 layer</text>
+<text x="802.6666666666666" y="171" font-size="15.5" fill="#1e293b" text-anchor="start">schedule, 32 registers or latency</text>
+<text x="802.6666666666666" y="192" font-size="15.5" fill="#1e293b" text-anchor="start">from a family name.</text>
+<text x="802.6666666666666" y="218" font-size="15.5" fill="#1e293b" text-anchor="start">Use version-specific technical</text>
+<text x="802.6666666666666" y="239" font-size="15.5" fill="#1e293b" text-anchor="start">reports and code.</text>
+<text x="600" y="325" font-size="14" fill="#475569" text-anchor="middle">Sources: arXiv:2606.17846; arXiv:2610.22178. No cross-paper benchmark values are reproduced here.</text>
+</svg>

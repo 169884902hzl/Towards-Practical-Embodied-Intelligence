@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 555" width="100%" height="100%" font-family="Arial, sans-serif">
+<rect width="1200" height="100%" fill="#FFFFFF"/>
+<text x="600" y="36" font-size="23" font-weight="700" fill="#0f172a" text-anchor="middle">Lab 2: clipped RTC guidance</text>
+<text x="600" y="64" font-size="14.5" fill="#475569" text-anchor="middle">SYNTHETIC TEACHING DIAGRAM - not real robot results or a claimed percentage improvement</text>
+<rect x="40" y="84" width="1120" height="182" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+<text x="65" y="108" font-size="15.5" font-weight="700" fill="#0f172a" text-anchor="start">RTC Soft-Mask Schedule W_i Across Chunk Horizon (H=50, d=8, s=16)</text>
+<rect x="95" y="118" width="80.0" height="115" fill="#dbeafe"/>
+<rect x="175.0" y="118" width="260.0" height="115" fill="#f3e8ff"/>
+<rect x="435.0" y="118" width="150.0" height="115" fill="#f1f5f9"/>
+<rect x="95" y="118" width="490" height="115" fill="none" stroke="#94a3b8" stroke-width="1.2"/>
+<text x="87" y="128" font-size="12" fill="#334155" text-anchor="end">1.0</text>
+<text x="87" y="233" font-size="12" fill="#334155" text-anchor="end">0.0</text>
+<text x="135.0" y="140" font-size="11.5" font-weight="700" fill="#1e40af" text-anchor="middle">[0,d)</text>
+<text x="305.0" y="140" font-size="11.5" font-weight="700" fill="#6d28d9" text-anchor="middle">Overlap [d,H-s)</text>
+<text x="510.0" y="140" font-size="11.5" font-weight="700" fill="#475569" text-anchor="middle">Free [H-s,H)</text>
+<polyline points="95.0,118.0 105.0,118.0 115.0,118.0 125.0,118.0 135.0,118.0 145.0,118.0 155.0,118.0 165.0,118.0 175.0,118.0 185.0,143.4 195.0,163.2 205.0,178.7 215.0,190.7 225.0,200.1 235.0,207.3 245.0,213.0 255.0,217.4 265.0,220.9 275.0,223.6 285.0,225.6 295.0,227.3 305.0,228.5 315.0,229.5 325.0,230.3 335.0,230.9 345.0,231.4 355.0,231.7 365.0,232.0 375.0,232.2 385.0,232.4 395.0,232.5 405.0,232.6 415.0,232.7 425.0,232.8 435.0,233.0 445.0,233.0 455.0,233.0 465.0,233.0 475.0,233.0 485.0,233.0 495.0,233.0 505.0,233.0 515.0,233.0 525.0,233.0 535.0,233.0 545.0,233.0 555.0,233.0 565.0,233.0 575.0,233.0 585.0,233.0" fill="none" stroke="#d97706" stroke-width="2" stroke-dasharray="5,3"/>
+<polyline points="95.0,118.0 105.0,118.0 115.0,118.0 125.0,118.0 135.0,118.0 145.0,118.0 155.0,118.0 165.0,118.0 175.0,128.6 185.0,138.5 195.0,147.8 205.0,156.4 215.0,164.4 225.0,171.8 235.0,178.6 245.0,184.9 255.0,190.7 265.0,196.0 275.0,200.9 285.0,205.4 295.0,209.4 305.0,213.1 315.0,216.4 325.0,219.3 335.0,221.9 345.0,224.2 355.0,226.2 365.0,227.9 375.0,229.3 385.0,230.5 395.0,231.4 405.0,232.1 415.0,232.6 425.0,232.9 435.0,233.0 445.0,233.0 455.0,233.0 465.0,233.0 475.0,233.0 485.0,233.0 495.0,233.0 505.0,233.0 515.0,233.0 525.0,233.0 535.0,233.0 545.0,233.0 555.0,233.0 565.0,233.0 575.0,233.0 585.0,233.0" fill="none" stroke="#2563eb" stroke-width="3"/>
+<text x="340" y="254" font-size="12.5" fill="#334155" text-anchor="middle">Chunk index i (blue solid: paper W_i; amber dashed: exp(-0.25*(i-d)))</text>
+<rect x="625" y="102" width="515" height="148" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+<text x="645" y="128" font-size="15" font-weight="700" fill="#1e40af" text-anchor="start">Exact RTC Equations (Black et al., arXiv:2506.07339, Eq. 2-5):</text>
+<text x="645" y="156" font-size="13" fill="#334155" text-anchor="start">• Overlap decay:  c_i = (H - s - i) / (H - s - d + 1),  W_i = c_i*(exp(c_i)-1)/(e-1)</text>
+<text x="645" y="182" font-size="13.5" fill="#334155" text-anchor="start">• Denoised endpoint:  a_hat_1 = a_tau + (1 - tau) * v_theta(a_tau, tau)</text>
+<text x="645" y="208" font-size="13.5" font-weight="700" fill="#0f766e" text-anchor="start">• Clipped VJP weight:  coeff = min(beta, (1 - tau) / (tau * r_tau^2))</text>
+<text x="645" y="234" font-size="13.5" fill="#334155" text-anchor="start">• Guided velocity:  v_rtc = v_theta + coeff * (d a_hat_1 / d a_tau)^T [W * (y - a_hat_1)]</text>
+<rect x="40.0" y="282.0" width="357.3" height="191" rx="10" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.5"/>
+<rect x="40.0" y="282.0" width="357.3" height="36" rx="10" fill="#2563eb"/>
+<text x="56.0" y="306" font-size="16.5" font-weight="700" fill="#ffffff" text-anchor="start">1. Build the soft mask</text>
+<text x="56.0" y="342" font-size="15.5" fill="#1e293b" text-anchor="start">Committed prefix: weight 1;</text>
+<text x="56.0" y="363" font-size="15.5" fill="#1e293b" text-anchor="start">distant suffix: weight 0.</text>
+<text x="56.0" y="389" font-size="15.5" fill="#1e293b" text-anchor="start">Transition uses the paper mask;</text>
+<text x="56.0" y="410" font-size="15.5" fill="#1e293b" text-anchor="start">optional variants are explicit.</text>
+<line x1="399.3" y1="377.5" x2="411.3" y2="377.5" stroke="#64748b" stroke-width="2.5"/>
+<polygon points="405.3,372.5 411.3,377.5 405.3,382.5" fill="#64748b"/>
+<rect x="413.3" y="282.0" width="357.3" height="191" rx="10" fill="#f0fdfa" stroke="#99f6e4" stroke-width="1.5"/>
+<rect x="413.3" y="282.0" width="357.3" height="36" rx="10" fill="#0d9488"/>
+<text x="429.3333333333333" y="306" font-size="16.5" font-weight="700" fill="#ffffff" text-anchor="start">2. Compute the endpoint VJP</text>
+<text x="429.3333333333333" y="342" font-size="15.5" fill="#1e293b" text-anchor="start">Endpoint = a + (1 - time) *</text>
+<text x="429.3333333333333" y="363" font-size="15.5" fill="#1e293b" text-anchor="start">velocity.</text>
+<text x="429.3333333333333" y="389" font-size="15.5" fill="#1e293b" text-anchor="start">Use the endpoint Jacobian, not an</text>
+<text x="429.3333333333333" y="410" font-size="15.5" fill="#1e293b" text-anchor="start">identity approximation.</text>
+<line x1="772.7" y1="377.5" x2="784.7" y2="377.5" stroke="#64748b" stroke-width="2.5"/>
+<polygon points="778.7,372.5 784.7,377.5 778.7,382.5" fill="#64748b"/>
+<rect x="786.7" y="282.0" width="357.3" height="191" rx="10" fill="#f5f3ff" stroke="#ddd6fe" stroke-width="1.5"/>
+<rect x="786.7" y="282.0" width="357.3" height="36" rx="10" fill="#7c3aed"/>
+<text x="802.6666666666666" y="306" font-size="16.5" font-weight="700" fill="#ffffff" text-anchor="start">3. Integrate finite guidance</text>
+<text x="802.6666666666666" y="342" font-size="15.5" fill="#1e293b" text-anchor="start">Clip the guidance coefficient at</text>
+<text x="802.6666666666666" y="363" font-size="15.5" fill="#1e293b" text-anchor="start">beta, including time zero.</text>
+<text x="802.6666666666666" y="389" font-size="15.5" fill="#1e293b" text-anchor="start">Report action differences, not a</text>
+<text x="802.6666666666666" y="410" font-size="15.5" fill="#1e293b" text-anchor="start">velocity or acceleration</text>
+<text x="802.6666666666666" y="431" font-size="15.5" fill="#1e293b" text-anchor="start">guarantee.</text>
+<text x="600" y="517" font-size="14" fill="#475569" text-anchor="middle">Source: labs/lab2_rtc_soft_masked_inpainting.py; Black et al., arXiv:2506.07339, equations 2-5.</text>
+</svg>

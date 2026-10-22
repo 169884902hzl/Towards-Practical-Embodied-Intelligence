@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 540" width="100%" height="100%" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <rect width="1200" height="540" fill="#FFFFFF"/>
+
+  <!-- Header -->
+  <text x="600" y="36" text-anchor="middle" font-size="20" font-weight="800" fill="#0f172a">Six Engineering Walls Broken by the pi-Series Evolution (2024–2026)</text>
+  <text x="600" y="58" text-anchor="middle" font-size="13" fill="#475569">Root-Cause Diagnosis: Which Specific Bottleneck Motivated Each Architectural Upgrade from pi_0 to pi_0.7</text>
+
+  <!-- 2x3 Grid of 6 Cards (width=366, height=205 each) -->
+  <!-- Wall 1 -->
+  <rect x="30" y="80" width="366" height="205" rx="9" fill="#f8fafc" stroke="#2563eb" stroke-width="1.8"/>
+  <rect x="30" y="80" width="366" height="32" rx="9" fill="#2563eb"/>
+  <text x="213" y="101" text-anchor="middle" font-size="12.5" font-weight="700" fill="#ffffff">Wall 1: Discrete Bin Quantization &amp; 5Hz Bottleneck</text>
+  <text x="44" y="130" font-size="11" font-weight="700" fill="#be123c">• Symptom (RT-2 / OpenVLA):</text>
+  <text x="54" y="146" font-size="10.5" fill="#334155">256-bin autoregressive tokens limit control to 3–5 Hz and</text>
+  <text x="54" y="161" font-size="10.5" fill="#334155">quantize sub-millimeter movements into jerky steps.</text>
+  <text x="44" y="185" font-size="11" font-weight="700" fill="#059669">• Solution in pi_0 (arXiv:2410.24164):</text>
+  <text x="54" y="201" font-size="10.5" fill="#334155">Decoupled 300M Flow Matching Action Expert generating</text>
+  <text x="54" y="216" font-size="10.5" font-weight="600" fill="#1e40af">continuous H=50 chunks at 50 Hz in K=10 Euler steps.</text>
+
+  <!-- Wall 2 -->
+  <rect x="417" y="80" width="366" height="205" rx="9" fill="#f8fafc" stroke="#0284c7" stroke-width="1.8"/>
+  <rect x="417" y="80" width="366" height="32" rx="9" fill="#0284c7"/>
+  <text x="600" y="101" text-anchor="middle" font-size="12.5" font-weight="700" fill="#ffffff">Wall 2: 50Hz Token Redundancy &amp; Slow Pretraining</text>
+  <text x="431" y="130" font-size="11" font-weight="700" fill="#be123c">• Symptom (High-Rate Action Sequences):</text>
+  <text x="441" y="146" font-size="10.5" fill="#334155">Adjacent 50Hz waypoints have &gt;0.98 correlation; naive</text>
+  <text x="441" y="161" font-size="10.5" fill="#334155">per-step tokenization wastes VLM capacity and FLOPs.</text>
+  <text x="431" y="185" font-size="11" font-weight="700" fill="#059669">• Solution in pi_0-FAST (arXiv:2501.09747):</text>
+  <text x="441" y="201" font-size="10.5" fill="#334155">Discrete Cosine Transform (DCT) + Byte-Pair Encoding</text>
+  <text x="441" y="216" font-size="10.5" font-weight="600" fill="#0369a1">compresses chunks 10x, accelerating pretraining by 5x.</text>
+
+  <!-- Wall 3 -->
+  <rect x="804" y="80" width="366" height="205" rx="9" fill="#f8fafc" stroke="#0d9488" stroke-width="1.8"/>
+  <rect x="804" y="80" width="366" height="32" rx="9" fill="#0d9488"/>
+  <text x="987" y="101" text-anchor="middle" font-size="12.5" font-weight="700" fill="#ffffff">Wall 3: VLM Catastrophic Semantic Forgetting</text>
+  <text x="818" y="130" font-size="11" font-weight="700" fill="#be123c">• Symptom (Joint Flow-VLM Backpropagation):</text>
+  <text x="828" y="146" font-size="10.5" fill="#334155">High-variance noisy gradients from continuous flow expert</text>
+  <text x="828" y="161" font-size="10.5" fill="#334155">corrupt pretrained VLM representations (Lab 1: -41.6%).</text>
+  <text x="818" y="185" font-size="11" font-weight="700" fill="#059669">• Solution in pi_0.5 + KI (arXiv:2505.23705):</text>
+  <text x="828" y="201" font-size="10.5" fill="#334155">Knowledge Insulation applies stop_gradient(KV_VLM)</text>
+  <text x="828" y="216" font-size="10.5" font-weight="600" fill="#0f766e">while training VLM exclusively with discrete FAST tokens.</text>
+
+  <!-- Wall 4 -->
+  <rect x="30" y="305" width="366" height="205" rx="9" fill="#f8fafc" stroke="#7c3aed" stroke-width="1.8"/>
+  <rect x="30" y="305" width="366" height="32" rx="9" fill="#7c3aed"/>
+  <text x="213" y="326" text-anchor="middle" font-size="12.5" font-weight="700" fill="#ffffff">Wall 4: Inter-Chunk Pause &amp; Boundary Torque Jerk</text>
+  <text x="44" y="355" font-size="11" font-weight="700" fill="#be123c">• Symptom (Asynchronous Chunk Switching):</text>
+  <text x="54" y="371" font-size="10.5" fill="#334155">30–200 ms inference delay causes robot to either pause</text>
+  <text x="54" y="386" font-size="10.5" fill="#334155">between chunks or jump discontinuously to a new mode.</text>
+  <text x="44" y="410" font-size="11" font-weight="700" fill="#059669">• Solution in RTC (arXiv:2506.07339 / 2512.05964):</text>
+  <text x="54" y="426" font-size="10.5" fill="#334155">Locks committed prefix a_{0:d} and applies exponential</text>
+  <text x="54" y="441" font-size="10.5" font-weight="600" fill="#6d28d9">soft-masked flow inpainting (Black et al., 2025).</text>
+
+  <!-- Wall 5 -->
+  <rect x="417" y="305" width="366" height="205" rx="9" fill="#f8fafc" stroke="#d97706" stroke-width="1.8"/>
+  <rect x="417" y="305" width="366" height="32" rx="9" fill="#d97706"/>
+  <text x="600" y="326" text-anchor="middle" font-size="12.5" font-weight="700" fill="#ffffff">Wall 5: Pure Imitation Performance Ceiling</text>
+  <text x="431" y="355" font-size="11" font-weight="700" fill="#be123c">• Symptom (Demonstration Suboptimality):</text>
+  <text x="441" y="371" font-size="10.5" fill="#334155">Pure BC averages slow/hesitant teleop trajectories and</text>
+  <text x="441" y="386" font-size="10.5" fill="#334155">cannot learn from autonomous failure rollouts.</text>
+  <text x="431" y="410" font-size="11" font-weight="700" fill="#059669">• Solution in pi*_{0.6} / RECAP (arXiv:2511.14759):</text>
+  <text x="441" y="426" font-size="10.5" fill="#334155">860M Flow Expert + Distributional Critic V_psi + CFG on</text>
+  <text x="441" y="441" font-size="10.5" font-weight="600" fill="#b45309">optimality indicator I_t = 1 doubles task throughput.</text>
+
+  <!-- Wall 6 -->
+  <rect x="804" y="305" width="366" height="205" rx="9" fill="#f8fafc" stroke="#059669" stroke-width="1.8"/>
+  <rect x="804" y="305" width="366" height="32" rx="9" fill="#059669"/>
+  <text x="987" y="326" text-anchor="middle" font-size="12.5" font-weight="700" fill="#ffffff">Wall 6: Language Bottleneck on Unseen Visual Goals</text>
+  <text x="818" y="355" font-size="11" font-weight="700" fill="#be123c">• Symptom (Verbal Subgoal Ambiguity):</text>
+  <text x="828" y="371" font-size="10.5" fill="#334155">Text subtasks cannot specify exact 3D object arrangements</text>
+  <text x="828" y="386" font-size="10.5" fill="#334155">or steer policies across novel compositional stages.</text>
+  <text x="818" y="410" font-size="11" font-weight="700" fill="#059669">• Solution in pi_{0.7} (arXiv:2604.15483):</text>
+  <text x="828" y="426" font-size="10.5" fill="#334155">Couples 14B Visual Subgoal Generator + 4-Channel</text>
+  <text x="828" y="441" font-size="10.5" font-weight="600" fill="#047857">Context Protocol to steer 860M Flow Action Expert.</text>
+</svg>

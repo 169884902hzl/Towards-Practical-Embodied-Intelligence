@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 580" width="100%" height="100%" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <rect width="1200" height="580" fill="#FFFFFF"/>
+
+  <!-- Header -->
+  <text x="600" y="36" text-anchor="middle" font-size="20" font-weight="800" fill="#0f172a">Embodied Data Scaling Laws vs. The Curse of Precision (ICRA 2026)</text>
+  <text x="600" y="58" text-anchor="middle" font-size="13" fill="#475569">Why Scene/Object Diversity Scales as a Power Law, While Sub-Millimeter Contact Precision Breaks Pure Imitation Scaling</text>
+
+  <!-- Left Panel: Power-Law Scaling of Scene & Object Diversity -->
+  <rect x="35" y="80" width="550" height="460" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="310" y="108" text-anchor="middle" font-size="15" font-weight="700" fill="#1e293b">(a) Power-Law Generalization with Environment Diversity M_env</text>
+  <text x="310" y="126" text-anchor="middle" font-size="12" fill="#64748b">S(M_env) = S_max - k * M_env^{-alpha} (prioritizing scene breadth over repetitions)</text>
+
+  <!-- Plot Area Left: x=100..555 (w=455), y=148..428 (h=280) -->
+  <rect x="100" y="148" width="455" height="280" fill="#ffffff" stroke="#94a3b8" stroke-width="1.2"/>
+
+  <!-- Grid Lines -->
+  <line x1="100" y1="188" x2="555" y2="188" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="100" y1="248" x2="555" y2="248" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="100" y1="308" x2="555" y2="308" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="100" y1="368" x2="555" y2="368" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="4,4"/>
+
+  <text x="92" y="154" text-anchor="end" font-size="11" fill="#334155">100%</text>
+  <text x="92" y="192" text-anchor="end" font-size="11" fill="#334155">85%</text>
+  <text x="92" y="252" text-anchor="end" font-size="11" fill="#334155">65%</text>
+  <text x="92" y="312" text-anchor="end" font-size="11" fill="#334155">45%</text>
+  <text x="92" y="372" text-anchor="end" font-size="11" fill="#334155">25%</text>
+  <text x="92" y="428" text-anchor="end" font-size="11" fill="#334155">5%</text>
+  <text x="55" y="288" text-anchor="middle" font-size="12" font-weight="600" fill="#1e293b" transform="rotate(-90 55 288)">Unseen Zero-Shot Success Rate (%)</text>
+
+  <!-- X Axis (Log10 Number of Distinct Scenes / Objects) -->
+  <text x="120" y="446" text-anchor="middle" font-size="11" fill="#334155">10^0 (1 Lab)</text>
+  <text x="225" y="446" text-anchor="middle" font-size="11" fill="#334155">10^1 (Bridge)</text>
+  <text x="335" y="446" text-anchor="middle" font-size="11" fill="#334155">10^2 (DROID)</text>
+  <text x="445" y="446" text-anchor="middle" font-size="11" fill="#334155">10^3 (Open-X)</text>
+  <text x="535" y="446" text-anchor="middle" font-size="11" font-weight="700" fill="#059669">10^4 (AgiBot)</text>
+  <text x="327" y="468" text-anchor="middle" font-size="12" font-weight="600" fill="#1e293b">Number of Distinct Training Scenes M_env (Log Scale)</text>
+
+  <!-- Curve A: High Diversity (50 demos x M scenes) -> climbs to 88% -->
+  <path d="M 120,395 C 200,320 310,225 535,180" fill="none" stroke="#059669" stroke-width="3.5"/>
+  <circle cx="120" cy="395" r="4.5" fill="#059669"/>
+  <circle cx="225" cy="312" r="4.5" fill="#059669"/>
+  <circle cx="335" cy="242" r="4.5" fill="#059669"/>
+  <circle cx="445" cy="198" r="4.5" fill="#059669"/>
+  <circle cx="535" cy="180" r="5" fill="#059669"/>
+
+  <!-- Curve B: Single-Scene Repetition (10,000 demos in 1 fixed lab scene) -> saturates at 28% on OOD scenes -->
+  <path d="M 120,395 C 200,365 310,358 535,356" fill="none" stroke="#d97706" stroke-width="2.8" stroke-dasharray="6,4"/>
+
+  <rect x="210" y="160" width="325" height="44" rx="5" fill="#ecfdf5" stroke="#10b981" stroke-width="1"/>
+  <text x="220" y="177" font-size="11" font-weight="700" fill="#065f46">Semantic &amp; Visual Diversity Scaling Law:</text>
+  <text x="220" y="193" font-size="10.5" fill="#047857">50 demos across 500 scenes &gt;&gt; 25,000 demos in 1 scene</text>
+
+  <rect x="220" y="312" width="315" height="36" rx="5" fill="#fffbeb" stroke="#f59e0b" stroke-width="1"/>
+  <text x="230" y="328" font-size="10.5" font-weight="700" fill="#b45309">Single-Scene Overfitting Plateau (~28% OOD SR):</text>
+  <text x="230" y="341" font-size="10" fill="#92400e">Repeating trajectories in one room yields zero OOD transfer</text>
+
+  <!-- Mega-Dataset Badges -->
+  <rect x="55" y="484" width="510" height="42" rx="6" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+  <text x="310" y="502" text-anchor="middle" font-size="11" font-weight="700" fill="#1e40af">2024–2026 Mega-Datasets: Open X (1M+ eps, 22 robots) | DROID (76k eps, 564 scenes)</text>
+  <text x="310" y="518" text-anchor="middle" font-size="11" font-weight="700" fill="#0f766e">AgiBot World (1M+ bimanual eps) | Galaxea (500h mobile bimanual) | RH20T (110k F/T eps)</text>
+
+  <!-- Right Panel: The Curse of Precision (ICRA 2026, arXiv:2607.23108) -->
+  <rect x="615" y="80" width="550" height="460" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="890" y="108" text-anchor="middle" font-size="15" font-weight="700" fill="#1e293b">(b) The Curse of Precision: Sample Complexity vs. Precision</text>
+  <text x="890" y="126" text-anchor="middle" font-size="12" fill="#64748b">Required Demonstrations log N ~ 1 / |P - c| Explodes as Precision P Approaches System Limit c</text>
+
+  <!-- Plot Area Right: x=680..1135 (w=455), y=148..428 (h=280) -->
+  <rect x="680" y="148" width="455" height="280" fill="#ffffff" stroke="#94a3b8" stroke-width="1.2"/>
+
+  <!-- Asymptote Wall at System Limit P -> c (x = 1035) -->
+  <rect x="1035" y="149" width="99" height="278" fill="#fff1f2"/>
+  <line x1="1035" y1="148" x2="1035" y2="428" stroke="#e11d48" stroke-width="2.5" stroke-dasharray="5,4"/>
+  <text x="1085" y="210" text-anchor="middle" font-size="11" font-weight="700" fill="#be123c">Precision Wall</text>
+  <text x="1085" y="226" text-anchor="middle" font-size="10.5" fill="#9f1239">P -&gt; c (System Limit)</text>
+  <text x="1085" y="246" text-anchor="middle" font-size="10" fill="#be123c">Pure Vision BC</text>
+  <text x="1085" y="260" text-anchor="middle" font-size="10" fill="#be123c">Requires N -&gt; inf</text>
+
+  <!-- Y Axis: Required Demos N (Log Scale: 10^1 to 10^6) -->
+  <text x="672" y="428" text-anchor="end" font-size="11" fill="#334155">10^1</text>
+  <text x="672" y="372" text-anchor="end" font-size="11" fill="#334155">10^2</text>
+  <text x="672" y="316" text-anchor="end" font-size="11" fill="#334155">10^3</text>
+  <text x="672" y="260" text-anchor="end" font-size="11" fill="#334155">10^4</text>
+  <text x="672" y="204" text-anchor="end" font-size="11" fill="#334155">10^5</text>
+  <text x="672" y="154" text-anchor="end" font-size="11" font-weight="700" fill="#e11d48">10^6+</text>
+  <text x="635" y="288" text-anchor="middle" font-size="12" font-weight="600" fill="#1e293b" transform="rotate(-90 635 288)">Required Demos N for Fixed Success (Log)</text>
+
+  <!-- X Axis: Target Precision P Approaching System Limit c -->
+  <text x="705" y="446" text-anchor="middle" font-size="11" fill="#334155">Coarse</text>
+  <text x="795" y="446" text-anchor="middle" font-size="11" fill="#334155">Moderate</text>
+  <text x="885" y="446" text-anchor="middle" font-size="11" fill="#334155">Fine</text>
+  <text x="975" y="446" text-anchor="middle" font-size="11" font-weight="700" fill="#e11d48">Near-Limit</text>
+  <text x="1035" y="446" text-anchor="middle" font-size="11" font-weight="700" fill="#be123c">Limit c</text>
+  <text x="907" y="468" text-anchor="middle" font-size="12" font-weight="600" fill="#1e293b">Target Task Precision P Approaching Emergent System Limit c</text>
+
+  <!-- Curve 1 (Red): Unupgraded System -> Hyperbolic Blowup log N ~ 1/|P-c| -->
+  <path d="M 705,395 C 795,382 885,355 950,295 C 985,255 1010,195 1025,152" fill="none" stroke="#e11d48" stroke-width="3.5"/>
+
+  <!-- Curve 2 (Emerald): Upgraded Agent System (Wrist Cam / Better Expert / Tactile + RL) Shifts Limit c -->
+  <path d="M 705,395 C 820,388 940,372 1110,350" fill="none" stroke="#059669" stroke-width="3.5"/>
+  <circle cx="705" cy="395" r="4.5" fill="#059669"/>
+  <circle cx="885" cy="378" r="4.5" fill="#059669"/>
+  <circle cx="975" cy="366" r="4.5" fill="#059669"/>
+  <circle cx="1085" cy="353" r="5" fill="#059669"/>
+
+  <rect x="695" y="165" width="320" height="54" rx="6" fill="#fff1f2" stroke="#f43f5e" stroke-width="1"/>
+  <text x="705" y="183" font-size="11" font-weight="700" fill="#9f1239">The Curse of Precision (ICRA 2026, arXiv:2607.23108):</text>
+  <text x="705" y="199" font-size="10.5" fill="#be123c">Limit c is an emergent property of the agent system.</text>
+  <text x="705" y="212" font-size="10.5" fill="#be123c">As P -&gt; c, required demos N grow super-exponentially.</text>
+
+  <rect x="695" y="305" width="325" height="46" rx="6" fill="#ecfdf5" stroke="#10b981" stroke-width="1"/>
+  <text x="705" y="322" font-size="11" font-weight="700" fill="#065f46">Shifting the Precision Limit c:</text>
+  <text x="705" y="338" font-size="10.5" fill="#047857">Wrist Cameras + Better Expert + Tactile/Impedance + RL</text>
+
+  <!-- Bottom Summary -->
+  <rect x="635" y="484" width="510" height="42" rx="6" fill="#ecfdf5" stroke="#a7f3d0" stroke-width="1"/>
+  <text x="890" y="502" text-anchor="middle" font-size="11" font-weight="700" fill="#065f46">Core Takeaway: Scale Vision/Video Data for Semantic Generalization (Left);</text>
+  <text x="890" y="518" text-anchor="middle" font-size="11" font-weight="700" fill="#047857">Use Visuotactile Sensing, Compliant Control &amp; RL for Sub-mm Precision (Right).</text>
+</svg>

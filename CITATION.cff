@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you find this survey, textbook tutorial, or PyTorch codebase useful in your research, please cite it using the metadata below."
+type: software
+title: "Towards Practical Embodied Intelligence: From Compliant Control, VLA/WAM, and Flow RL to Contact-Rich Manipulation"
+authors:
+  - family-names: "Hu"
+    given-names: "Zhilun"
+    affiliation: "Huazhong University of Science and Technology (HUST)"
+repository-code: "https://github.com/169884902hzl/Towards-Practical-Embodied-Intelligence"
+url: "https://169884902hzl.github.io/Towards-Practical-Embodied-Intelligence/"
+license: MIT
+version: "1.0.0"
+date-released: 2026-10-21
+keywords:
+  - embodied-ai
+  - vision-language-action
+  - world-action-models
+  - flow-matching
+  - reinforcement-learning
+  - imitation-learning
+  - tactile-sensing
+  - deformable-object-manipulation

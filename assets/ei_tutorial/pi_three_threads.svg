@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" width="100%" height="100%" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <rect width="1200" height="500" fill="#FFFFFF"/>
+
+  <!-- Header -->
+  <text x="600" y="36" text-anchor="middle" font-size="20" font-weight="800" fill="#0f172a">Three Unifying Architectural Threads Across the pi-Series Lineage</text>
+  <text x="600" y="58" text-anchor="middle" font-size="13" fill="#475569">Structural Synthesis of Physical Intelligence Research Along Representation, Execution, and Post-Training Axes</text>
+
+  <!-- Thread 1: Representation & Gradient Hygiene -->
+  <rect x="30" y="84" width="366" height="385" rx="10" fill="#f8fafc" stroke="#2563eb" stroke-width="2"/>
+  <rect x="30" y="84" width="366" height="40" rx="10" fill="#2563eb"/>
+  <text x="213" y="109" text-anchor="middle" font-size="13.5" font-weight="700" fill="#ffffff">Thread 1: Dual-System Representation</text>
+  
+  <rect x="48" y="140" width="330" height="90" rx="6" fill="#ffffff" stroke="#bfdbfe"/>
+  <text x="213" y="162" text-anchor="middle" font-size="12" font-weight="700" fill="#1e40af">Step A: Mixture-of-Experts Split (pi_0)</text>
+  <text x="60" y="182" font-size="10.5" fill="#334155">• System 2: VLM Backbone (3B -&gt; 4B Gemma)</text>
+  <text x="60" y="198" font-size="10.5" fill="#334155">• System 1: Flow Action Expert (300M -&gt; 860M)</text>
+  <text x="60" y="214" font-size="10.5" fill="#1d4ed8">• Shared block-causal self-attention KV cache</text>
+
+  <rect x="48" y="244" width="330" height="95" rx="6" fill="#ffffff" stroke="#bfdbfe"/>
+  <text x="213" y="266" text-anchor="middle" font-size="12" font-weight="700" fill="#1e40af">Step B: Fast Discrete Pretraining (FAST)</text>
+  <text x="60" y="286" font-size="10.5" fill="#334155">• Frequency-domain DCT + BPE tokens train</text>
+  <text x="70" y="302" font-size="10" fill="#475569">the VLM trunk 5x faster than continuous diffusion</text>
+  <text x="60" y="320" font-size="10.5" fill="#1d4ed8">• Aligns physical trajectories with language space</text>
+
+  <rect x="48" y="353" width="330" height="98" rx="6" fill="#eff6ff" stroke="#93c5fd"/>
+  <text x="213" y="375" text-anchor="middle" font-size="12" font-weight="700" fill="#1e3a8a">Step C: Knowledge Insulation (KI)</text>
+  <text x="60" y="395" font-size="10.5" font-weight="600" fill="#1e40af">• stop_gradient(KV_VLM) isolates VLM from</text>
+  <text x="70" y="411" font-size="10" fill="#334155">noisy flow-matching regression gradients</text>
+  <text x="60" y="431" font-size="10.5" font-weight="700" fill="#059669">Result: Fast pretraining + 50Hz continuous control</text>
+
+  <!-- Thread 2: Real-Time Asynchronous Execution -->
+  <rect x="417" y="84" width="366" height="385" rx="10" fill="#f8fafc" stroke="#7c3aed" stroke-width="2"/>
+  <rect x="417" y="84" width="366" height="40" rx="10" fill="#7c3aed"/>
+  <text x="600" y="109" text-anchor="middle" font-size="13.5" font-weight="700" fill="#ffffff">Thread 2: Continuous-Time Execution</text>
+
+  <rect x="435" y="140" width="330" height="90" rx="6" fill="#ffffff" stroke="#ddd6fe"/>
+  <text x="600" y="162" text-anchor="middle" font-size="12" font-weight="700" fill="#5b21b6">Step A: Open-Loop Action Chunking</text>
+  <text x="447" y="182" font-size="10.5" fill="#334155">• Predicts H=50 steps (1.0 s horizon @ 50Hz)</text>
+  <text x="447" y="198" font-size="10.5" fill="#334155">• Amortizes 27.5 ms VLM+ODE latency across</text>
+  <text x="457" y="214" font-size="10" fill="#475569">multiple 20 ms hardware control ticks</text>
+
+  <rect x="435" y="244" width="330" height="95" rx="6" fill="#ffffff" stroke="#ddd6fe"/>
+  <text x="600" y="266" text-anchor="middle" font-size="12" font-weight="700" fill="#5b21b6">Step B: Inference-Time RTC Inpainting</text>
+  <text x="447" y="286" font-size="10.5" fill="#334155">• Freezes committed prefix a_{0:d} during</text>
+  <text x="457" y="302" font-size="10" fill="#475569">background GPU inference of next chunk</text>
+  <text x="447" y="320" font-size="10.5" font-weight="600" fill="#6d28d9">• Soft mask W_i = c_i(e^{c_i}-1)/(e-1) &amp; clipped VJP</text>
+
+  <rect x="435" y="353" width="330" height="98" rx="6" fill="#f5f3ff" stroke="#c4b5fd"/>
+  <text x="600" y="375" text-anchor="middle" font-size="12" font-weight="700" fill="#4c1d95">Step C: Training-Time RTC Conditioning</text>
+  <text x="447" y="395" font-size="10.5" font-weight="600" fill="#5b21b6">• Passes clean prefix a_{0:d} at tau=1 directly</text>
+  <text x="457" y="411" font-size="10" fill="#334155">into flow network during training (2512.05964)</text>
+  <text x="447" y="431" font-size="10.5" font-weight="700" fill="#059669">Result: Zero VJP overhead &amp; C1 smooth trajectories</text>
+
+  <!-- Thread 3: Data Conditioning & RL Post-Training -->
+  <rect x="804" y="84" width="366" height="385" rx="10" fill="#f8fafc" stroke="#059669" stroke-width="2"/>
+  <rect x="804" y="84" width="366" height="40" rx="10" fill="#059669"/>
+  <text x="987" y="109" text-anchor="middle" font-size="13.5" font-weight="700" fill="#ffffff">Thread 3: RL &amp; Context Steering</text>
+
+  <rect x="822" y="140" width="330" height="90" rx="6" fill="#ffffff" stroke="#a7f3d0"/>
+  <text x="987" y="162" text-anchor="middle" font-size="12" font-weight="700" fill="#065f46">Step A: Supervised SFT on Clean Demos</text>
+  <text x="834" y="182" font-size="10.5" fill="#334155">• Pretrain on broad heterogeneous data, then</text>
+  <text x="844" y="198" font-size="10" fill="#475569">fine-tune on curated high-quality target demos</text>
+  <text x="834" y="214" font-size="10.5" fill="#e11d48">• Capped by human teleoperator speed/precision</text>
+
+  <rect x="822" y="244" width="330" height="95" rx="6" fill="#ffffff" stroke="#a7f3d0"/>
+  <text x="987" y="266" text-anchor="middle" font-size="12" font-weight="700" fill="#065f46">Step B: Advantage-Conditioned RL (RECAP)</text>
+  <text x="834" y="286" font-size="10.5" fill="#334155">• Turns RL into conditional Flow Matching via</text>
+  <text x="844" y="302" font-size="10" font-weight="600" fill="#047857">optimality indicator I_t = 1[A^pi(s_t, a_t) &gt; eps]</text>
+  <text x="834" y="320" font-size="10.5" fill="#334155">• Scales to 4B VLM + 860M Action Expert</text>
+
+  <rect x="822" y="353" width="330" height="98" rx="6" fill="#ecfdf5" stroke="#6ee7b7"/>
+  <text x="987" y="375" text-anchor="middle" font-size="12" font-weight="700" fill="#064e3b">Step C: 14B Subgoal + Metadata Steering</text>
+  <text x="834" y="395" font-size="10.5" font-weight="600" fill="#065f46">• pi_{0.7} conditions on 14B visual subgoals</text>
+  <text x="844" y="411" font-size="10" fill="#334155">and explicit trajectory quality/speed metadata</text>
+  <text x="834" y="431" font-size="10.5" font-weight="700" fill="#059669">Result: Steerable generalist policy beyond BC</text>
+</svg>

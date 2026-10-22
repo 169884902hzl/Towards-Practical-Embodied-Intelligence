@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 363" width="100%" height="100%" font-family="Arial, sans-serif">
+<rect width="1200" height="100%" fill="#FFFFFF"/>
+<text x="600" y="36" font-size="23" font-weight="700" fill="#0f172a" text-anchor="middle">VLM backbone comparison: separate family from implementation</text>
+<text x="600" y="64" font-size="14.5" fill="#475569" text-anchor="middle">Conceptual comparison; model family alone does not determine a robot policy&#x27;s architecture</text>
+<rect x="40.0" y="90.0" width="357.3" height="191" rx="10" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.5"/>
+<rect x="40.0" y="90.0" width="357.3" height="36" rx="10" fill="#2563eb"/>
+<text x="56.0" y="114" font-size="16.5" font-weight="700" fill="#ffffff" text-anchor="start">PaliGemma / Gemma</text>
+<text x="56.0" y="150" font-size="15.5" fill="#1e293b" text-anchor="start">Check the exact backbone release</text>
+<text x="56.0" y="171" font-size="15.5" fill="#1e293b" text-anchor="start">and action-expert configuration.</text>
+<text x="56.0" y="197" font-size="15.5" fill="#1e293b" text-anchor="start">Count vision, language and action</text>
+<text x="56.0" y="218" font-size="15.5" fill="#1e293b" text-anchor="start">parameters separately.</text>
+<rect x="413.3" y="90.0" width="357.3" height="191" rx="10" fill="#f0fdfa" stroke="#99f6e4" stroke-width="1.5"/>
+<rect x="413.3" y="90.0" width="357.3" height="36" rx="10" fill="#0d9488"/>
+<text x="429.3333333333333" y="114" font-size="16.5" font-weight="700" fill="#ffffff" text-anchor="start">Qwen-VL-based policies</text>
+<text x="429.3333333333333" y="150" font-size="15.5" fill="#1e293b" text-anchor="start">Qwen-RobotManip describes</text>
+<text x="429.3333333333333" y="171" font-size="15.5" fill="#1e293b" text-anchor="start">alignment and multi-source</text>
+<text x="429.3333333333333" y="192" font-size="15.5" fill="#1e293b" text-anchor="start">scaling.</text>
+<text x="429.3333333333333" y="218" font-size="15.5" fill="#1e293b" text-anchor="start">REKI describes a compact VLA with</text>
+<text x="429.3333333333333" y="239" font-size="15.5" fill="#1e293b" text-anchor="start">persistent expert registers.</text>
+<rect x="786.7" y="90.0" width="357.3" height="191" rx="10" fill="#f5f3ff" stroke="#ddd6fe" stroke-width="1.5"/>
+<rect x="786.7" y="90.0" width="357.3" height="36" rx="10" fill="#7c3aed"/>
+<text x="802.6666666666666" y="114" font-size="16.5" font-weight="700" fill="#ffffff" text-anchor="start">Deployment comparison</text>
+<text x="802.6666666666666" y="150" font-size="15.5" fill="#1e293b" text-anchor="start">Report hardware, precision, input</text>
+<text x="802.6666666666666" y="171" font-size="15.5" fill="#1e293b" text-anchor="start">images and action horizon.</text>
+<text x="802.6666666666666" y="197" font-size="15.5" fill="#1e293b" text-anchor="start">Separate control frequency from</text>
+<text x="802.6666666666666" y="218" font-size="15.5" fill="#1e293b" text-anchor="start">end-to-end inference latency.</text>
+<text x="600" y="325" font-size="14" fill="#475569" text-anchor="middle">Sources: arXiv:2410.24164; arXiv:2606.17846; arXiv:2610.22178. No unsupported Qwen3.5 performance ledger.</text>
+</svg>

@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 545" width="100%" height="100%" font-family="Arial, sans-serif">
+<rect width="1200" height="100%" fill="#FFFFFF"/>
+<text x="600" y="36" font-size="23" font-weight="700" fill="#0f172a" text-anchor="middle">Lab 3: controlled synthetic input ablation</text>
+<text x="600" y="64" font-size="14.5" fill="#475569" text-anchor="middle">SYNTHETIC - not real results; Method A/B are not published robotics methods</text>
+<rect x="40" y="84" width="1120" height="172" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+<text x="60" y="110" font-size="15.5" font-weight="700" fill="#0f172a" text-anchor="start">Two-Part Synthetic Teaching Structure in labs/lab3_cascade_tactile_flow.py</text>
+<rect x="60" y="124" width="520" height="116" rx="8" fill="#ffffff" stroke="#93c5fd" stroke-width="1.5"/>
+<text x="80" y="148" font-size="14.5" font-weight="700" fill="#1e40af" text-anchor="start">Part 1: Synthetic Proprioception-Dropout Ablation</text>
+<text x="80" y="172" font-size="13" fill="#334155" text-anchor="start">• Sweep train correlation rho in {0.0, 0.5, 0.9} between proprio &amp; target</text>
+<text x="80" y="194" font-size="13" fill="#334155" text-anchor="start">• Method A (0% dropout) vs Method B (50% proprio dropout during training)</text>
+<text x="80" y="216" font-size="13" fill="#475569" text-anchor="start">• Evaluated on independent noisy test inputs (no claimed winner across all rho)</text>
+<rect x="615" y="124" width="525" height="116" rx="8" fill="#ffffff" stroke="#5eead4" stroke-width="1.5"/>
+<text x="635" y="148" font-size="14.5" font-weight="700" fill="#0f766e" text-anchor="start">Part 2: Generic Two-Stage Flow Rollout</text>
+<text x="635" y="172" font-size="13" fill="#334155" text-anchor="start">• Stage 1 integrates slow_steps with context features (batch, H, D)</text>
+<text x="635" y="194" font-size="13" font-weight="700" fill="#059669" text-anchor="start">• Stage 2 integrates fast_steps with context + auxiliary features</text>
+<text x="635" y="216" font-size="13" fill="#334155" text-anchor="start">• Verifies output tensor shape (batch, H, D) and numerical finiteness</text>
+<rect x="40.0" y="272.0" width="357.3" height="191" rx="10" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.5"/>
+<rect x="40.0" y="272.0" width="357.3" height="36" rx="10" fill="#2563eb"/>
+<text x="56.0" y="296" font-size="16.5" font-weight="700" fill="#ffffff" text-anchor="start">Matched models and data</text>
+<text x="56.0" y="332" font-size="15.5" fill="#1e293b" text-anchor="start">A/B use the same network,</text>
+<text x="56.0" y="353" font-size="15.5" fill="#1e293b" text-anchor="start">initialization, inputs and</text>
+<text x="56.0" y="374" font-size="15.5" fill="#1e293b" text-anchor="start">optimizer.</text>
+<text x="56.0" y="400" font-size="15.5" fill="#1e293b" text-anchor="start">Only training-time input dropout</text>
+<text x="56.0" y="421" font-size="15.5" fill="#1e293b" text-anchor="start">differs.</text>
+<rect x="413.3" y="272.0" width="357.3" height="191" rx="10" fill="#f0fdfa" stroke="#99f6e4" stroke-width="1.5"/>
+<rect x="413.3" y="272.0" width="357.3" height="36" rx="10" fill="#0d9488"/>
+<text x="429.3333333333333" y="296" font-size="16.5" font-weight="700" fill="#ffffff" text-anchor="start">Partial train correlation</text>
+<text x="429.3333333333333" y="332" font-size="15.5" fill="#1e293b" text-anchor="start">Sweep correlation: 0.0, 0.5, 0.9.</text>
+<text x="429.3333333333333" y="358" font-size="15.5" fill="#1e293b" text-anchor="start">Tactile observations remain noisy;</text>
+<text x="429.3333333333333" y="379" font-size="15.5" fill="#1e293b" text-anchor="start">targets are synthetic scalars.</text>
+<rect x="786.7" y="272.0" width="357.3" height="191" rx="10" fill="#f5f3ff" stroke="#ddd6fe" stroke-width="1.5"/>
+<rect x="786.7" y="272.0" width="357.3" height="36" rx="10" fill="#7c3aed"/>
+<text x="802.6666666666666" y="296" font-size="16.5" font-weight="700" fill="#ffffff" text-anchor="start">Independent test input</text>
+<text x="802.6666666666666" y="332" font-size="15.5" fill="#1e293b" text-anchor="start">Test proprioception is independent</text>
+<text x="802.6666666666666" y="353" font-size="15.5" fill="#1e293b" text-anchor="start">random noise, not fixed zero.</text>
+<text x="802.6666666666666" y="379" font-size="15.5" fill="#1e293b" text-anchor="start">Report MSE without asserting a</text>
+<text x="802.6666666666666" y="400" font-size="15.5" fill="#1e293b" text-anchor="start">winner or robot success rate.</text>
+<text x="600" y="507" font-size="14" fill="#475569" text-anchor="middle">Source: labs/lab3_cascade_tactile_flow.py. A separate configurable two-stage rollout checks output tensor shapes.</text>
+</svg>

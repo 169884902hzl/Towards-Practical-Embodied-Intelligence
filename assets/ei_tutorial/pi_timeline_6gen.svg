@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 540" width="100%" height="100%" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <rect width="1200" height="540" fill="#FFFFFF"/>
+
+  <!-- Header -->
+  <text x="600" y="36" text-anchor="middle" font-size="20" font-weight="800" fill="#0f172a">Physical Intelligence (pi-Series) Six-Generation Evolution Timeline (Oct 2024 – Apr 2026)</text>
+  <text x="600" y="58" text-anchor="middle" font-size="13" fill="#475569">From Foundational 50Hz Flow-Matching VLA (pi_0) to Steerable 4-Channel Generalist Policy with 14B Subgoal Generator (pi_0.7)</text>
+
+  <!-- Horizontal Timeline Bar -->
+  <line x1="60" y1="115" x2="1140" y2="115" stroke="#cbd5e1" stroke-width="4"/>
+
+  <!-- 6 Generation Nodes & Cards (width=178 each, gap=14) -->
+  <!-- Gen 1: pi_0 (Oct 2024) -->
+  <circle cx="119" cy="115" r="10" fill="#2563eb" stroke="#ffffff" stroke-width="3"/>
+  <text x="119" y="95" text-anchor="middle" font-size="11.5" font-weight="700" fill="#2563eb">Oct 2024</text>
+  <rect x="30" y="138" width="178" height="365" rx="8" fill="#f8fafc" stroke="#2563eb" stroke-width="1.8"/>
+  <rect x="30" y="138" width="178" height="34" rx="8" fill="#2563eb"/>
+  <text x="119" y="160" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">1. pi_0 (openpi)</text>
+  <text x="42" y="190" font-size="10.5" font-weight="700" fill="#1e40af">arXiv:2410.24164</text>
+  <text x="42" y="210" font-size="10.5" fill="#334155">• PaliGemma-3B VLM +</text>
+  <text x="50" y="225" font-size="10.5" font-weight="600" fill="#1d4ed8">300M Flow Action Expert</text>
+  <text x="42" y="245" font-size="10.5" fill="#334155">• Block-wise causal mask</text>
+  <text x="42" y="265" font-size="10.5" fill="#334155">• H=50 chunk @ 50Hz</text>
+  <text x="42" y="285" font-size="10.5" fill="#334155">• 10,000+ hrs across 7</text>
+  <text x="50" y="300" font-size="10" fill="#475569">bimanual/single robots</text>
+  <rect x="40" y="445" width="158" height="44" rx="5" fill="#eff6ff" stroke="#93c5fd"/>
+  <text x="119" y="463" text-anchor="middle" font-size="10" font-weight="700" fill="#1e40af">Key Breakthrough:</text>
+  <text x="119" y="478" text-anchor="middle" font-size="9.5" fill="#1d4ed8">50Hz Continuous Flow VLA</text>
+
+  <!-- Gen 2: pi_0-FAST (Jan 2025) -->
+  <circle cx="311" cy="115" r="10" fill="#0284c7" stroke="#ffffff" stroke-width="3"/>
+  <text x="311" y="95" text-anchor="middle" font-size="11.5" font-weight="700" fill="#0284c7">Jan 2025</text>
+  <rect x="222" y="138" width="178" height="365" rx="8" fill="#f8fafc" stroke="#0284c7" stroke-width="1.8"/>
+  <rect x="222" y="138" width="178" height="34" rx="8" fill="#0284c7"/>
+  <text x="311" y="160" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">2. pi_0-FAST</text>
+  <text x="234" y="190" font-size="10.5" font-weight="700" fill="#0369a1">arXiv:2501.09747</text>
+  <text x="234" y="210" font-size="10.5" fill="#334155">• Frequency-space DCT +</text>
+  <text x="242" y="225" font-size="10.5" font-weight="600" fill="#0369a1">BPE Action Tokenization</text>
+  <text x="234" y="245" font-size="10.5" fill="#334155">• Eliminates 50Hz marginal</text>
+  <text x="242" y="260" font-size="10" fill="#475569">redundancy of raw bins</text>
+  <text x="234" y="280" font-size="10.5" fill="#334155">• 5x faster VLM pretraining</text>
+  <text x="234" y="300" font-size="10.5" fill="#334155">• Slow AR decoding at</text>
+  <text x="242" y="315" font-size="10" fill="#b45309">test time (~150-300 ms)</text>
+  <rect x="232" y="445" width="158" height="44" rx="5" fill="#f0f9ff" stroke="#7dd3fc"/>
+  <text x="311" y="463" text-anchor="middle" font-size="10" font-weight="700" fill="#0369a1">Key Breakthrough:</text>
+  <text x="311" y="478" text-anchor="middle" font-size="9.5" fill="#0284c7">5x Faster Pretraining</text>
+
+  <!-- Gen 3: pi_0.5 + KI (Apr-May 2025) -->
+  <circle cx="503" cy="115" r="10" fill="#0d9488" stroke="#ffffff" stroke-width="3"/>
+  <text x="503" y="95" text-anchor="middle" font-size="11.5" font-weight="700" fill="#0d9488">Apr–May 2025</text>
+  <rect x="414" y="138" width="178" height="365" rx="8" fill="#f8fafc" stroke="#0d9488" stroke-width="1.8"/>
+  <rect x="414" y="138" width="178" height="34" rx="8" fill="#0d9488"/>
+  <text x="503" y="160" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">3. pi_0.5 + KI</text>
+  <text x="426" y="190" font-size="10.5" font-weight="700" fill="#0f766e">arXiv:2504.16054 / 2505.23705</text>
+  <text x="426" y="210" font-size="10.5" fill="#334155">• Hybrid Dual-Head: FAST</text>
+  <text x="434" y="225" font-size="10" fill="#475569">tokens (train) + Flow (test)</text>
+  <text x="426" y="245" font-size="10.5" font-weight="600" fill="#0f766e">• Knowledge Insulation:</text>
+  <text x="434" y="260" font-size="10" fill="#334155">stop_gradient on VLM KV</text>
+  <text x="426" y="280" font-size="10.5" fill="#334155">• High-level semantic</text>
+  <text x="434" y="295" font-size="10" fill="#475569">subtask CoT + 50Hz flow</text>
+  <text x="426" y="315" font-size="10.5" fill="#334155">• Unseen home kitchens</text>
+  <rect x="424" y="445" width="158" height="44" rx="5" fill="#f0fdfa" stroke="#5eead4"/>
+  <text x="503" y="463" text-anchor="middle" font-size="10" font-weight="700" fill="#0f766e">Key Breakthrough:</text>
+  <text x="503" y="478" text-anchor="middle" font-size="9.5" fill="#0d9488">Open-World Generalization</text>
+
+  <!-- Gen 4: RTC + Training-Time RTC (Jun-Dec 2025) -->
+  <circle cx="695" cy="115" r="10" fill="#7c3aed" stroke="#ffffff" stroke-width="3"/>
+  <text x="695" y="95" text-anchor="middle" font-size="11.5" font-weight="700" fill="#7c3aed">Jun–Dec 2025</text>
+  <rect x="606" y="138" width="178" height="365" rx="8" fill="#f8fafc" stroke="#7c3aed" stroke-width="1.8"/>
+  <rect x="606" y="138" width="178" height="34" rx="8" fill="#7c3aed"/>
+  <text x="695" y="160" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">4. Real-Time RTC</text>
+  <text x="618" y="190" font-size="10.5" font-weight="700" fill="#5b21b6">arXiv:2506.07339 / 2512.05964</text>
+  <text x="618" y="210" font-size="10.5" fill="#334155">• Asynchronous inference</text>
+  <text x="626" y="225" font-size="10" fill="#475569">without stopping between chunks</text>
+  <text x="618" y="245" font-size="10.5" font-weight="600" fill="#6d28d9">• Committed prefix a_{0:d}</text>
+  <text x="618" y="265" font-size="10.5" fill="#334155">• Soft-masked flow guidance</text>
+  <text x="626" y="280" font-size="10" fill="#475569">W_i = c_i(e^{c_i}-1)/(e-1)</text>
+  <text x="618" y="300" font-size="10.5" fill="#334155">• Training-Time RTC removes</text>
+  <text x="626" y="315" font-size="10" fill="#475569">test-time VJP overhead</text>
+  <rect x="616" y="445" width="158" height="44" rx="5" fill="#f5f3ff" stroke="#c4b5fd"/>
+  <text x="695" y="463" text-anchor="middle" font-size="10" font-weight="700" fill="#5b21b6">Key Breakthrough:</text>
+  <text x="695" y="478" text-anchor="middle" font-size="9.5" fill="#6d28d9">Zero-Pause C1 Continuity</text>
+
+  <!-- Gen 5: pi*_{0.6} / RECAP (Nov 2025) -->
+  <circle cx="887" cy="115" r="10" fill="#d97706" stroke="#ffffff" stroke-width="3"/>
+  <text x="887" y="95" text-anchor="middle" font-size="11.5" font-weight="700" fill="#d97706">Nov 2025</text>
+  <rect x="798" y="138" width="178" height="365" rx="8" fill="#f8fafc" stroke="#d97706" stroke-width="1.8"/>
+  <rect x="798" y="138" width="178" height="34" rx="8" fill="#d97706"/>
+  <text x="887" y="160" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">5. pi*_{0.6} (RECAP)</text>
+  <text x="810" y="190" font-size="10.5" font-weight="700" fill="#b45309">arXiv:2511.14759</text>
+  <text x="810" y="210" font-size="10.5" fill="#334155">• Upgraded Gemma 3-4B VLM</text>
+  <text x="810" y="228" font-size="10.5" font-weight="700" fill="#b45309">• 860M Flow Action Expert</text>
+  <text x="810" y="248" font-size="10.5" fill="#334155">• Distributional Critic V_psi</text>
+  <text x="810" y="268" font-size="10.5" fill="#334155">• Advantage-Conditioned</text>
+  <text x="818" y="283" font-size="10" fill="#475569">Flow Matching (I_t in {0,1})</text>
+  <text x="810" y="303" font-size="10.5" fill="#334155">• 2x throughput &amp; 50% lower</text>
+  <text x="818" y="318" font-size="10" fill="#475569">failure on espresso/folding</text>
+  <rect x="808" y="445" width="158" height="44" rx="5" fill="#fffbeb" stroke="#fcd34d"/>
+  <text x="887" y="463" text-anchor="middle" font-size="10" font-weight="700" fill="#92400e">Key Breakthrough:</text>
+  <text x="887" y="478" text-anchor="middle" font-size="9.5" fill="#b45309">Scalable RL from Experience</text>
+
+  <!-- Gen 6: pi_{0.7} (Apr 2026) -->
+  <circle cx="1079" cy="115" r="10" fill="#059669" stroke="#ffffff" stroke-width="3"/>
+  <text x="1079" y="95" text-anchor="middle" font-size="11.5" font-weight="700" fill="#059669">Apr 2026</text>
+  <rect x="990" y="138" width="178" height="365" rx="8" fill="#f8fafc" stroke="#059669" stroke-width="2"/>
+  <rect x="990" y="138" width="178" height="34" rx="8" fill="#059669"/>
+  <text x="1079" y="160" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">6. pi_{0.7} (Steerable)</text>
+  <text x="1002" y="190" font-size="10.5" font-weight="700" fill="#065f46">arXiv:2604.15483</text>
+  <text x="1002" y="210" font-size="10.5" fill="#334155">• 4-Channel Context Protocol</text>
+  <text x="1010" y="225" font-size="10" fill="#475569">(Task, Subgoal, Metadata, State)</text>
+  <text x="1002" y="245" font-size="10.5" font-weight="700" fill="#047857">• External 14B Video/Image</text>
+  <text x="1010" y="260" font-size="10.5" font-weight="700" fill="#047857">Visual Subgoal Generator</text>
+  <text x="1002" y="280" font-size="10.5" fill="#334155">• Compositional steering on</text>
+  <text x="1010" y="295" font-size="10" fill="#475569">unseen multi-stage tasks</text>
+  <text x="1002" y="315" font-size="10.5" fill="#334155">• Full metadata disambiguation</text>
+  <rect x="1000" y="445" width="158" height="44" rx="5" fill="#ecfdf5" stroke="#6ee7b7"/>
+  <text x="1079" y="463" text-anchor="middle" font-size="10" font-weight="700" fill="#065f46">Key Breakthrough:</text>
+  <text x="1079" y="478" text-anchor="middle" font-size="9.5" fill="#059669">14B Visual Subgoal Steering</text>
+</svg>

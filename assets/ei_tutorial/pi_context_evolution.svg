@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" width="100%" height="100%" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <rect width="1200" height="520" fill="#FFFFFF"/>
+
+  <!-- Header -->
+  <text x="600" y="36" text-anchor="middle" font-size="20" font-weight="800" fill="#0f172a">Evolution of Conditioning Context &amp; Steerability: From pi_0 to pi_0.7 (4-Channel Protocol)</text>
+  <text x="600" y="58" text-anchor="middle" font-size="13" fill="#475569">How Richer Context Conditioning Solves Multimodal Ambiguity, Suboptimal Data Pollution, and Unseen Compositional Tasks</text>
+
+  <!-- 4 Progressive Columns (width=270 each) -->
+  <!-- Stage 1: pi_0 -->
+  <rect x="30" y="82" width="270" height="405" rx="9" fill="#f8fafc" stroke="#64748b" stroke-width="1.8"/>
+  <rect x="30" y="82" width="270" height="36" rx="9" fill="#475569"/>
+  <text x="165" y="105" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">1. pi_0: Flat Task Conditioning</text>
+  <rect x="46" y="134" width="238" height="110" rx="6" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="165" y="156" text-anchor="middle" font-size="11.5" font-weight="700" fill="#334155">Input Context Channels:</text>
+  <text x="58" y="178" font-size="11" fill="#334155">• [Ch 1] Coarse Task Text l</text>
+  <text x="68" y="194" font-size="10" fill="#64748b">("fold the laundry", "bus table")</text>
+  <text x="58" y="216" font-size="11" fill="#334155">• [Ch 2] Current RGB + Proprio q_t</text>
+  <rect x="46" y="258" width="238" height="210" rx="6" fill="#fff1f2" stroke="#fecdd3"/>
+  <text x="165" y="280" text-anchor="middle" font-size="11.5" font-weight="700" fill="#9f1239">Fundamental Limitations:</text>
+  <text x="58" y="302" font-size="10.5" fill="#be123c">1. Quality Blindness: Treats slow,</text>
+  <text x="68" y="318" font-size="10" fill="#881337">hesitant teleop demos identically</text>
+  <text x="68" y="332" font-size="10" fill="#881337">to fast expert trajectories.</text>
+  <text x="58" y="354" font-size="10.5" fill="#be123c">2. Zero Intermediate Steering:</text>
+  <text x="68" y="370" font-size="10" fill="#881337">Cannot specify spatial path or</text>
+  <text x="68" y="384" font-size="10" fill="#881337">visual goal configuration.</text>
+  <text x="58" y="406" font-size="10.5" fill="#be123c">3. Long-Horizon Drift on unseen</text>
+  <text x="68" y="422" font-size="10" fill="#881337">multi-stage task compositions.</text>
+
+  <!-- Stage 2: pi_0.5 -->
+  <rect x="320" y="82" width="270" height="405" rx="9" fill="#f8fafc" stroke="#2563eb" stroke-width="1.8"/>
+  <rect x="320" y="82" width="270" height="36" rx="9" fill="#2563eb"/>
+  <text x="455" y="105" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">2. pi_0.5: Semantic Subtask CoT</text>
+  <rect x="336" y="134" width="238" height="110" rx="6" fill="#ffffff" stroke="#bfdbfe"/>
+  <text x="455" y="156" text-anchor="middle" font-size="11.5" font-weight="700" fill="#1e40af">Input Context Channels:</text>
+  <text x="348" y="178" font-size="11" fill="#334155">• [Ch 1] High-Level Task Prompt l</text>
+  <text x="348" y="198" font-size="11" font-weight="700" fill="#1d4ed8">• [Ch 2] Autoregressive Language</text>
+  <text x="358" y="214" font-size="10.5" font-weight="600" fill="#1d4ed8">Subtask Decomposition l_sub</text>
+  <text x="348" y="232" font-size="11" fill="#334155">• [Ch 3] Current RGB + Proprio q_t</text>
+  <rect x="336" y="258" width="238" height="210" rx="6" fill="#eff6ff" stroke="#93c5fd"/>
+  <text x="455" y="280" text-anchor="middle" font-size="11.5" font-weight="700" fill="#1e3a8a">Capabilities &amp; Bottleneck:</text>
+  <text x="348" y="302" font-size="10.5" fill="#059669">+ Decomposes 10-minute home</text>
+  <text x="358" y="318" font-size="10" fill="#334155">tasks into atomic verbal steps</text>
+  <text x="358" y="332" font-size="10" fill="#334155">("pick sponge -&gt; wipe counter").</text>
+  <text x="348" y="356" font-size="10.5" fill="#be123c">- Bottleneck: Language is too</text>
+  <text x="358" y="372" font-size="10" fill="#881337">coarse to specify 3D geometry,</text>
+  <text x="358" y="386" font-size="10" fill="#881337">exact grasp pose, or continuous</text>
+  <text x="358" y="400" font-size="10" fill="#881337">cable routing curvature.</text>
+
+  <!-- Stage 3: pi*_{0.6} (RECAP) -->
+  <rect x="610" y="82" width="270" height="405" rx="9" fill="#f8fafc" stroke="#d97706" stroke-width="1.8"/>
+  <rect x="610" y="82" width="270" height="36" rx="9" fill="#d97706"/>
+  <text x="745" y="105" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">3. pi*_{0.6}: Advantage Indicator</text>
+  <rect x="626" y="134" width="238" height="110" rx="6" fill="#ffffff" stroke="#fde68a"/>
+  <text x="745" y="156" text-anchor="middle" font-size="11.5" font-weight="700" fill="#92400e">Input Context Channels:</text>
+  <text x="638" y="178" font-size="11" fill="#334155">• [Ch 1] Task Prompt + Subtask l_sub</text>
+  <text x="638" y="198" font-size="11" font-weight="700" fill="#b45309">• [Ch 2] Optimality Indicator I_t</text>
+  <text x="648" y="214" font-size="10.5" font-weight="600" fill="#b45309">I_t = 1 [A^pi(s_t, a_t) &gt; eps]</text>
+  <text x="638" y="232" font-size="11" fill="#334155">• [Ch 3] Current RGB + Proprio q_t</text>
+  <rect x="626" y="258" width="238" height="210" rx="6" fill="#fffbeb" stroke="#fcd34d"/>
+  <text x="745" y="280" text-anchor="middle" font-size="11.5" font-weight="700" fill="#92400e">Capabilities &amp; Bottleneck:</text>
+  <text x="638" y="302" font-size="10.5" fill="#059669">+ Separates high-advantage expert</text>
+  <text x="648" y="318" font-size="10" fill="#334155">modes from failed/slow rollouts</text>
+  <text x="648" y="332" font-size="10" fill="#334155">using 860M Flow Action Expert.</text>
+  <text x="638" y="356" font-size="10.5" fill="#059669">+ Classifier-Free Guidance (CFG)</text>
+  <text x="648" y="372" font-size="10" fill="#334155">amplifies optimal behavior.</text>
+  <text x="638" y="396" font-size="10.5" fill="#be123c">- Still lacks explicit visual</text>
+  <text x="648" y="412" font-size="10" fill="#881337">subgoal imagination for unseen</text>
+  <text x="648" y="426" font-size="10" fill="#881337">spatial targets.</text>
+
+  <!-- Stage 4: pi_{0.7} (4-Channel + 14B Visual Subgoal) -->
+  <rect x="900" y="82" width="270" height="405" rx="9" fill="#f8fafc" stroke="#059669" stroke-width="2"/>
+  <rect x="900" y="82" width="270" height="36" rx="9" fill="#059669"/>
+  <text x="1035" y="105" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">4. pi_{0.7}: 4-Channel Steerable</text>
+  <rect x="916" y="134" width="238" height="135" rx="6" fill="#ffffff" stroke="#a7f3d0"/>
+  <text x="1035" y="154" text-anchor="middle" font-size="11.5" font-weight="700" fill="#065f46">4-Channel Context Protocol:</text>
+  <text x="926" y="174" font-size="10.5" fill="#334155">• [Ch 1] High-Level Task + Subtask</text>
+  <text x="926" y="194" font-size="10.5" font-weight="700" fill="#047857">• [Ch 2] 14B Generated Visual</text>
+  <text x="936" y="209" font-size="10" font-weight="700" fill="#047857">Subgoal Image hat{I}_{t+Delta}</text>
+  <text x="926" y="229" font-size="10.5" font-weight="700" fill="#065f46">• [Ch 3] Structured Metadata c_t</text>
+  <text x="936" y="244" font-size="9.5" fill="#334155">(Source, Robot ID, Speed, Quality)</text>
+  <text x="926" y="261" font-size="10.5" fill="#334155">• [Ch 4] Multi-Cam RGB + Proprio</text>
+  <rect x="916" y="280" width="238" height="188" rx="6" fill="#ecfdf5" stroke="#6ee7b7"/>
+  <text x="1035" y="302" text-anchor="middle" font-size="11.5" font-weight="700" fill="#064e3b">2026 SOTA Capabilities:</text>
+  <text x="928" y="324" font-size="10.5" font-weight="600" fill="#047857">+ 14B Visual Subgoal Generator</text>
+  <text x="938" y="340" font-size="10" fill="#334155">imagines intermediate goal image,</text>
+  <text x="938" y="354" font-size="10" fill="#334155">grounding 3D spatial targets.</text>
+  <text x="928" y="376" font-size="10.5" font-weight="600" fill="#047857">+ Metadata Disambiguation:</text>
+  <text x="938" y="392" font-size="10" fill="#334155">Ingests noisy/suboptimal datasets</text>
+  <text x="938" y="406" font-size="10" fill="#334155">without degrading test-time peak</text>
+  <text x="938" y="420" font-size="10" fill="#334155">speed or precision.</text>
+  <text x="928" y="442" font-size="10.5" font-weight="700" fill="#065f46">+ Zero-Shot Skill Composition</text>
+</svg>

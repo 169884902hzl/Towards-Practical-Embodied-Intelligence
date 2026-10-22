@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 540" width="100%" height="100%" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <rect width="1200" height="540" fill="#FFFFFF"/>
+
+  <!-- Header -->
+  <text x="600" y="36" text-anchor="middle" font-size="20" font-weight="800" fill="#0f172a">Imitation Learning Covariate Shift (O(eps * H^2)), Action Chunking (ACT), and DAgger Recovery</text>
+  <text x="600" y="58" text-anchor="middle" font-size="13" fill="#475569">Why Single-Step Behavioral Cloning Drifts Off-Manifold and How H-Step Chunking &amp; Interactive Interventions Stabilize Control</text>
+
+  <!-- Left Panel: Phase-Space Trajectory Funnel -->
+  <rect x="35" y="80" width="680" height="425" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="375" y="108" text-anchor="middle" font-size="15" font-weight="700" fill="#1e293b">(a) State-Space Trajectory Tube &amp; Covariate Shift Divergence</text>
+  <text x="375" y="126" text-anchor="middle" font-size="12" fill="#64748b">Comparison of Expert Manifold D_E, Single-Step BC Drift, ACT Chunking, and DAgger Corrective Funnel</text>
+
+  <!-- Plot Canvas -->
+  <rect x="70" y="145" width="610" height="310" fill="#ffffff" stroke="#94a3b8" stroke-width="1.2"/>
+
+  <!-- Expert Data Tube Shading -->
+  <path d="M 90,340 C 230,320 350,220 650,240 L 650,295 C 350,275 230,375 90,395 Z" fill="#dbeafe" opacity="0.65"/>
+  
+  <!-- Expert Centerline Trajectory (Blue Solid) -->
+  <path d="M 90,367 C 230,347 350,247 650,267" fill="none" stroke="#2563eb" stroke-width="3.5"/>
+  <text x="530" y="254" font-size="11.5" font-weight="700" fill="#1e40af">Expert Manifold p_{pi*}(s_t)</text>
+
+  <!-- Single-Step BC Trajectory (Red): Small error at t=1 compounds quadratically O(eps * H^2) into obstacle/OOD -->
+  <path d="M 90,367 C 180,350 250,280 340,210 C 410,165 480,155 560,152" fill="none" stroke="#e11d48" stroke-width="3.2" stroke-dasharray="6,3"/>
+  <circle cx="265" cy="275" r="5" fill="#e11d48"/>
+  <circle cx="380" cy="188" r="5" fill="#e11d48"/>
+  <circle cx="520" cy="154" r="5.5" fill="#e11d48"/>
+
+  <rect x="275" y="155" width="295" height="44" rx="5" fill="#fff1f2" stroke="#f43f5e" stroke-width="1"/>
+  <text x="285" y="172" font-size="11" font-weight="700" fill="#9f1239">Single-Step BC Compounding Error O(eps * H^2)</text>
+  <text x="285" y="188" font-size="10.5" fill="#be123c">Leaves training support D_E -&gt; unrecoverable OOD drift</text>
+
+  <!-- DAgger / HG-DAgger Corrective Vectors (Emerald Arrows pulling trajectory back into tube) -->
+  <line x1="275" y1="270" x2="295" y2="298" stroke="#059669" stroke-width="2.5"/>
+  <polygon points="290,299 300,304 298,293" fill="#059669"/>
+  <line x1="390" y1="242" x2="412" y2="268" stroke="#059669" stroke-width="2.5"/>
+  <polygon points="407,269 417,274 415,263" fill="#059669"/>
+  <line x1="510" y1="232" x2="530" y2="256" stroke="#059669" stroke-width="2.5"/>
+  <polygon points="525,257 535,262 533,251" fill="#059669"/>
+
+  <rect x="330" y="345" width="325" height="52" rx="6" fill="#ecfdf5" stroke="#10b981" stroke-width="1"/>
+  <text x="340" y="363" font-size="11" font-weight="700" fill="#065f46">1. Action Chunking (ACT): Reduces horizon H -&gt; H/k</text>
+  <text x="340" y="381" font-size="11" font-weight="700" fill="#047857">2. DAgger / HG-DAgger: Queries expert on visited states,</text>
+  <text x="352" y="394" font-size="10.5" fill="#047857">reducing bound from O(eps * H^2) to linear O(eps * H)</text>
+
+  <!-- Legend Left -->
+  <line x1="85" y1="480" x2="115" y2="480" stroke="#2563eb" stroke-width="3.5"/>
+  <text x="122" y="484" font-size="11" font-weight="600" fill="#1e293b">Expert Trajectory + ACT Chunking</text>
+  <line x1="335" y1="480" x2="365" y2="480" stroke="#e11d48" stroke-width="3" stroke-dasharray="5,3"/>
+  <text x="372" y="484" font-size="11" font-weight="600" fill="#1e293b">Single-Step BC Drift</text>
+  <line x1="515" y1="480" x2="545" y2="480" stroke="#059669" stroke-width="3"/>
+  <text x="552" y="484" font-size="11" font-weight="600" fill="#1e293b">DAgger Recovery Funnel</text>
+
+  <!-- Right Panel: Mathematical Comparison Table & Error Scaling -->
+  <rect x="735" y="80" width="430" height="425" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="950" y="108" text-anchor="middle" font-size="15" font-weight="700" fill="#1e293b">(b) Theoretical Suboptimality Bounds (Ross et al.)</text>
+
+  <rect x="755" y="130" width="390" height="110" rx="7" fill="#fff1f2" stroke="#fda4af" stroke-width="1.5"/>
+  <text x="768" y="152" font-size="12" font-weight="700" fill="#9f1239">1. Naive Single-Step Behavioral Cloning (BC)</text>
+  <text x="768" y="174" font-size="11.5" font-weight="700" fill="#be123c">J(pi_BC) - J(pi*) &lt;= H^2 * eps_BC</text>
+  <text x="768" y="196" font-size="10.5" fill="#334155">• Supervised only on expert state distribution d_{pi*}(s)</text>
+  <text x="768" y="212" font-size="10.5" fill="#334155">• Suffers from non-Markovian human pauses &amp; multimodal</text>
+  <text x="778" y="226" font-size="10.5" fill="#334155">action averaging (L2 mean of left + right hits obstacle)</text>
+
+  <rect x="755" y="252" width="390" height="110" rx="7" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.5"/>
+  <text x="768" y="274" font-size="12" font-weight="700" fill="#1e40af">2. Action Chunking with Transformers (ACT, 2023)</text>
+  <text x="768" y="296" font-size="11.5" font-weight="700" fill="#1d4ed8">Effective Decision Horizon Reduced: H_eff = H / k</text>
+  <text x="768" y="318" font-size="10.5" fill="#334155">• Predicts k-step joint sequence a_{t:t+k} (k = 50..100)</text>
+  <text x="768" y="334" font-size="10.5" fill="#334155">• CVAE latent variable z captures human style modality</text>
+  <text x="768" y="350" font-size="10.5" fill="#334155">• Bridges non-Markovian idle gaps in teleoperation</text>
+
+  <rect x="755" y="374" width="390" height="112" rx="7" fill="#ecfdf5" stroke="#6ee7b7" stroke-width="1.5"/>
+  <text x="768" y="396" font-size="12" font-weight="700" fill="#065f46">3. Interactive Imitation (DAgger / HG-DAgger)</text>
+  <text x="768" y="418" font-size="11.5" font-weight="700" fill="#047857">J(pi_DAgger) - J(pi*) &lt;= H * eps_online + O(1/N)</text>
+  <text x="768" y="440" font-size="10.5" fill="#334155">• Dataset aggregation D &lt;- D U {(s_t, pi*(s_t))} under</text>
+  <text x="778" y="456" font-size="10.5" fill="#334155">learner-visited boundary states</text>
+  <text x="768" y="474" font-size="10.5" font-weight="600" fill="#065f46">• Teaches policy explicit recovery gradients back to D_E</text>
+</svg>

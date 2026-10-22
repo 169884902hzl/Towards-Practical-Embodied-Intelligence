@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 540" width="100%" height="100%" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <rect width="1200" height="540" fill="#FFFFFF"/>
+
+  <!-- Header -->
+  <text x="600" y="36" text-anchor="middle" font-size="20" font-weight="800" fill="#0f172a">Bimanual Deformable Linear Object (DLO / Wire Harness) Manipulation Architecture</text>
+  <text x="600" y="58" text-anchor="middle" font-size="13" fill="#475569">Coupling 3D Centerline Spline Tracking, Online Material Stiffness Estimation, Tension-Bounded Impedance &amp; Tactile Clip Insertion</text>
+
+  <!-- Left Panel: Physics & State Representation -->
+  <rect x="35" y="80" width="366" height="430" rx="10" fill="#f8fafc" stroke="#2563eb" stroke-width="2"/>
+  <rect x="35" y="80" width="366" height="38" rx="10" fill="#2563eb"/>
+  <text x="218" y="104" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">1. Cosserat Rod Physics &amp; State c(s, t)</text>
+
+  <rect x="51" y="134" width="334" height="118" rx="7" fill="#ffffff" stroke="#bfdbfe"/>
+  <text x="63" y="156" font-size="11.5" font-weight="700" fill="#1e40af">Ordered 3D Centerline &amp; Keypoints:</text>
+  <text x="63" y="176" font-size="10.5" fill="#334155">• Parameterizes cable of length L by arc-length</text>
+  <text x="71" y="192" font-size="10.5" font-weight="600" fill="#1d4ed8">s in [0, L]:  c(s, t) in R^3,  t(s) = dc/ds</text>
+  <text x="63" y="212" font-size="10.5" fill="#334155">• Discretized into M=16 equidistant 3D nodes</text>
+  <text x="63" y="230" font-size="10.5" fill="#334155">• Topological crossing graph tracks knot state</text>
+
+  <rect x="51" y="266" width="334" height="118" rx="7" fill="#eff6ff" stroke="#93c5fd"/>
+  <text x="63" y="288" font-size="11.5" font-weight="700" fill="#1e3a8a">Elastic Potential Energy Functional:</text>
+  <text x="63" y="308" font-size="10.5" font-weight="700" fill="#1e40af">E_DLO = 1/2 int_0^L (E*I kappa(s)^2 + G*J tau(s)^2) ds</text>
+  <text x="63" y="330" font-size="10.5" fill="#334155">• E*I: Bending flexural rigidity</text>
+  <text x="63" y="348" font-size="10.5" fill="#334155">• G*J: Torsional twist modulus</text>
+  <text x="63" y="366" font-size="10.5" fill="#334155">• kappa(s), tau(s): Local curvature &amp; twist</text>
+
+  <rect x="51" y="398" width="334" height="96" rx="7" fill="#ffffff" stroke="#bfdbfe"/>
+  <text x="63" y="420" font-size="11.5" font-weight="700" fill="#1e40af">Online Material Estimator (arXiv:2609.12634):</text>
+  <text x="63" y="440" font-size="10.5" fill="#334155">• Infers latent stiffness z_mat = f_enc(c_{t-H:t}, F_{t-H:t})</text>
+  <text x="63" y="458" font-size="10.5" fill="#059669" font-weight="600">• Adapts zero-shot from soft silicone to stiff</text>
+  <text x="71" y="474" font-size="10.5" fill="#059669" font-weight="600">automotive wire harnesses!</text>
+
+  <!-- Center Panel: Dual-Arm Leader-Follower Coordination -->
+  <rect x="417" y="80" width="366" height="430" rx="10" fill="#f8fafc" stroke="#0d9488" stroke-width="2"/>
+  <rect x="417" y="80" width="366" height="38" rx="10" fill="#0d9488"/>
+  <text x="600" y="104" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">2. Bimanual Tension &amp; Impedance Control</text>
+
+  <rect x="433" y="134" width="334" height="118" rx="7" fill="#ffffff" stroke="#99f6e4"/>
+  <text x="445" y="156" font-size="11.5" font-weight="700" fill="#0f766e">Asymmetric Role Allocation:</text>
+  <text x="445" y="176" font-size="10.5" fill="#334155">• Arm A (Anchor / Tensioner): Holds cable</text>
+  <text x="453" y="192" font-size="10" fill="#475569">upstream of metal clip to maintain tautness</text>
+  <text x="445" y="212" font-size="10.5" fill="#334155">• Arm B (Insertion / Routing Head): Aligns</text>
+  <text x="453" y="228" font-size="10" fill="#475569">cable segment into U-channel or terminal socket</text>
+
+  <rect x="433" y="266" width="334" height="118" rx="7" fill="#f0fdfa" stroke="#5eead4"/>
+  <text x="445" y="288" font-size="11.5" font-weight="700" fill="#115e59">Tension Bounds &amp; Anti-Snap Constraint:</text>
+  <text x="445" y="308" font-size="10.5" font-weight="700" fill="#0f766e">T_min (1.5 N) &lt;= ||F_tension|| &lt;= T_max (12.0 N)</text>
+  <text x="445" y="330" font-size="10.5" fill="#334155">• Below T_min: Cable sags &amp; buckles at clip entry</text>
+  <text x="445" y="348" font-size="10.5" fill="#334155">• Above T_max: Risk of insulation damage or</text>
+  <text x="453" y="364" font-size="10" fill="#be123c">uprooting previously routed clips</text>
+
+  <rect x="433" y="398" width="334" height="96" rx="7" fill="#ffffff" stroke="#99f6e4"/>
+  <text x="445" y="420" font-size="11.5" font-weight="700" fill="#0f766e">DLO-Lab &amp; DeformX (arXiv:2606.04206 / 2606.22116):</text>
+  <text x="445" y="440" font-size="10.5" fill="#334155">• Coupled bimanual admittance law relaxes</text>
+  <text x="453" y="456" font-size="10" fill="#334155">Arm A stiffness K_p along tangent t(s) within</text>
+  <text x="453" y="472" font-size="10" font-weight="600" fill="#0d9488">2 ms whenever snagging spike is detected.</text>
+
+  <!-- Right Panel: Visuotactile Clip Insertion & Recovery -->
+  <rect x="800" y="80" width="365" height="430" rx="10" fill="#f8fafc" stroke="#059669" stroke-width="2"/>
+  <rect x="800" y="80" width="365" height="38" rx="10" fill="#059669"/>
+  <text x="982" y="104" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">3. Visuotactile Feedback &amp; Closed-Loop Recovery</text>
+
+  <rect x="816" y="134" width="333" height="118" rx="7" fill="#ffffff" stroke="#a7f3d0"/>
+  <text x="828" y="156" font-size="11.5" font-weight="700" fill="#065f46">ViTac Fingertip Rolling &amp; Slip Control:</text>
+  <text x="828" y="176" font-size="10.5" fill="#334155">• Optical tactile pads track cable cylinder axis</text>
+  <text x="836" y="192" font-size="10" fill="#475569">pose (y_cable, theta_cable) inside closed fingers</text>
+  <text x="828" y="212" font-size="10.5" fill="#334155">• Tangential shear field detects incipient slip</text>
+  <text x="836" y="228" font-size="10" font-weight="600" fill="#047857">-&gt; dynamically modulates gripper normal force</text>
+
+  <rect x="816" y="266" width="333" height="118" rx="7" fill="#ecfdf5" stroke="#6ee7b7"/>
+  <text x="828" y="288" font-size="11.5" font-weight="700" fill="#064e3b">Snap-Fit Acoustic/Force Signature Verification:</text>
+  <text x="828" y="308" font-size="10.5" fill="#334155">• Successful clip seating produces characteristic</text>
+  <text x="836" y="324" font-size="10.5" font-weight="600" fill="#047857">dF_z / dt &lt; -8.0 N/s force drop impulse</text>
+  <text x="828" y="344" font-size="10.5" fill="#334155">• Verifier confirms seating before advancing</text>
+  <text x="836" y="360" font-size="10" fill="#475569">to next clip waypoint along harness fixture</text>
+
+  <rect x="816" y="398" width="333" height="96" rx="7" fill="#ffffff" stroke="#a7f3d0"/>
+  <text x="828" y="420" font-size="11.5" font-weight="700" fill="#065f46">Symmetry-Aware Bimanual Augmentation (SAVLA):</text>
+  <text x="828" y="440" font-size="10.5" fill="#334155">• Reflects images, point clouds, and SE(3) arm</text>
+  <text x="836" y="456" font-size="10" fill="#475569">actions across sagittal plane, doubling sample</text>
+  <text x="836" y="472" font-size="10" font-weight="600" fill="#059669">efficiency on symmetric routing fixtures.</text>
+</svg>

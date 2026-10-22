@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 540" width="100%" height="100%" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <rect width="1200" height="540" fill="#FFFFFF"/>
+
+  <!-- Header -->
+  <text x="600" y="36" text-anchor="middle" font-size="20" font-weight="800" fill="#0f172a">Generative Action Heads: Score-Based Diffusion Policy vs. Optimal Transport Flow Matching</text>
+  <text x="600" y="58" text-anchor="middle" font-size="13" fill="#475569">Why Modern VLAs (pi_0, pi_0.5, GR00T, Qwen-RobotManip) Replaced Curved DDPM Denoising with Straight-Line OT Flow ODEs</text>
+
+  <!-- Left Panel: Diffusion Policy (DDPM / DDIM) -->
+  <rect x="35" y="80" width="550" height="430" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="310" y="108" text-anchor="middle" font-size="15" font-weight="700" fill="#1e293b">(a) Diffusion Policy (Chi et al., RSS 2023 / IJRR)</text>
+  <text x="310" y="126" text-anchor="middle" font-size="12" fill="#64748b">Curved Stochastic Reverse SDE / Score Matching Paths (K = 50–100 Steps, or 10–16 DDIM)</text>
+
+  <!-- Trajectory Visualization Left -->
+  <rect x="60" y="144" width="500" height="210" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="1.2"/>
+  
+  <!-- Gaussian Prior Cloud (Left) -->
+  <ellipse cx="120" cy="249" rx="36" ry="70" fill="#e2e8f0" stroke="#64748b" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="120" y="166" text-anchor="middle" font-size="10.5" font-weight="700" fill="#334155">Prior Noise</text>
+  <text x="120" y="253" text-anchor="middle" font-size="11" font-weight="700" fill="#1e293b">a^K ~ N(0, I)</text>
+
+  <!-- Target Action Modes (Right: Mode A Upper, Mode B Lower) -->
+  <ellipse cx="495" cy="195" rx="28" ry="26" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="495" y="199" text-anchor="middle" font-size="10.5" font-weight="700" fill="#1e40af">Mode 1 (Left)</text>
+  <ellipse cx="495" cy="303" rx="28" ry="26" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="495" y="307" text-anchor="middle" font-size="10.5" font-weight="700" fill="#1e40af">Mode 2 (Right)</text>
+
+  <!-- Curved & Jittery Denoising Trajectories -->
+  <path d="M 145,215 Q 220,140 310,225 T 470,192" fill="none" stroke="#d97706" stroke-width="2.5"/>
+  <path d="M 145,280 Q 240,355 330,265 T 470,305" fill="none" stroke="#d97706" stroke-width="2.5"/>
+  <text x="310" y="168" text-anchor="middle" font-size="10.5" font-weight="700" fill="#b45309">High Curvature -&gt; Discretization Error at Small K</text>
+
+  <!-- Math Box Left -->
+  <rect x="60" y="368" width="500" height="126" rx="7" fill="#fffbeb" stroke="#fcd34d" stroke-width="1.5"/>
+  <text x="75" y="390" font-size="11.5" font-weight="700" fill="#92400e">Forward Noise &amp; Reverse Score-Matching Objective:</text>
+  <text x="75" y="410" font-size="11" fill="#334155">• Forward:  a^k = sqrt(alpha_bar_k) * a^0 + sqrt(1 - alpha_bar_k) * eps</text>
+  <text x="75" y="430" font-size="11" fill="#334155">• Training Loss:  L_DDPM = E_{k, a^0, eps} || eps_theta(a^k, k | o_t) - eps ||_2^2</text>
+  <text x="75" y="450" font-size="10" fill="#334155">• Reverse: a^{k-1} = alpha_k^{-1/2}(a^k - (1-alpha_k)(1-alpha_bar_k)^{-1/2} eps_theta) + sigma_k z</text>
+  <text x="75" y="472" font-size="11" font-weight="600" fill="#b45309">• Limitation: Curved VP/VE schedules require 10–100 function evaluations (NFEs)</text>
+
+  <!-- Right Panel: Optimal Transport Conditional Flow Matching (OT-CFM) -->
+  <rect x="615" y="80" width="550" height="430" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="890" y="108" text-anchor="middle" font-size="15" font-weight="700" fill="#1e293b">(b) Optimal Transport Flow Matching (Lipman et al. / openpi)</text>
+  <text x="890" y="126" text-anchor="middle" font-size="12" fill="#64748b">Straight-Line Constant-Velocity ODE Trajectories (Exact Integration in K = 5–10 Euler Steps)</text>
+
+  <!-- Trajectory Visualization Right -->
+  <rect x="640" y="144" width="500" height="210" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="1.2"/>
+
+  <!-- Gaussian Prior Cloud (Left) -->
+  <ellipse cx="700" cy="249" rx="36" ry="70" fill="#e2e8f0" stroke="#64748b" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="700" y="166" text-anchor="middle" font-size="10.5" font-weight="700" fill="#334155">Prior Noise</text>
+  <text x="700" y="253" text-anchor="middle" font-size="11" font-weight="700" fill="#1e293b">a_0 ~ N(0, I)</text>
+
+  <!-- Target Action Modes (Right) -->
+  <ellipse cx="1075" cy="195" rx="28" ry="26" fill="#d1fae5" stroke="#059669" stroke-width="2"/>
+  <text x="1075" y="199" text-anchor="middle" font-size="10.5" font-weight="700" fill="#065f46">Mode 1 (Left)</text>
+  <ellipse cx="1075" cy="303" rx="28" ry="26" fill="#d1fae5" stroke="#059669" stroke-width="2"/>
+  <text x="1075" y="307" text-anchor="middle" font-size="10.5" font-weight="700" fill="#065f46">Mode 2 (Right)</text>
+
+  <!-- Straight-Line Flow Trajectories -->
+  <line x1="730" y1="220" x2="1047" y2="195" stroke="#059669" stroke-width="3"/>
+  <line x1="730" y1="245" x2="1047" y2="202" stroke="#10b981" stroke-width="2" stroke-dasharray="5,3"/>
+  <line x1="730" y1="278" x2="1047" y2="303" stroke="#059669" stroke-width="3"/>
+  <line x1="730" y1="255" x2="1047" y2="296" stroke="#10b981" stroke-width="2" stroke-dasharray="5,3"/>
+  <text x="890" y="168" text-anchor="middle" font-size="10.5" font-weight="700" fill="#065f46">Linear Interpolation Path a_tau = (1 - tau)a_0 + tau*a_1</text>
+
+  <!-- Math Box Right -->
+  <rect x="640" y="368" width="500" height="126" rx="7" fill="#ecfdf5" stroke="#6ee7b7" stroke-width="1.5"/>
+  <text x="655" y="390" font-size="11.5" font-weight="700" fill="#065f46">Optimal Transport Conditional Flow Matching (OT-CFM):</text>
+  <text x="655" y="410" font-size="11" fill="#334155">• Linear Interpolation:  a_tau = (1 - tau) a_0 + tau a_1,   tau in [0, 1]</text>
+  <text x="655" y="430" font-size="11" fill="#334155">• Velocity Matching Loss:  L_CFM = E_{tau, a_0, a_1} || v_theta(a_tau, tau | o_t) - (a_1 - a_0) ||_2^2</text>
+  <text x="655" y="450" font-size="11" fill="#334155">• Euler ODE Integration:  a_{tau + 1/K} = a_tau + (1/K) v_theta(a_tau, tau | o_t)</text>
+  <text x="655" y="472" font-size="11" font-weight="700" fill="#047857">• Advantage: Zero schedule tuning, low gradient variance, 50Hz real-time at K = 5–10</text>
+</svg>

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 363" width="100%" height="100%" font-family="Arial, sans-serif">
+<rect width="1200" height="100%" fill="#FFFFFF"/>
+<text x="600" y="36" font-size="23" font-weight="700" fill="#0f172a" text-anchor="middle">Comparing embodied-policy results: retain the protocol</text>
+<text x="600" y="64" font-size="14.5" fill="#475569" text-anchor="middle">Evaluation guide - no unsupported cross-paper ranking or latency measurements</text>
+<rect x="40.0" y="90.0" width="357.3" height="191" rx="10" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.5"/>
+<rect x="40.0" y="90.0" width="357.3" height="36" rx="10" fill="#2563eb"/>
+<text x="56.0" y="114" font-size="16.5" font-weight="700" fill="#ffffff" text-anchor="start">Task and distribution</text>
+<text x="56.0" y="150" font-size="15.5" fill="#1e293b" text-anchor="start">Record benchmark version, split</text>
+<text x="56.0" y="171" font-size="15.5" fill="#1e293b" text-anchor="start">and task list.</text>
+<text x="56.0" y="197" font-size="15.5" fill="#1e293b" text-anchor="start">Standard LIBERO and shifted</text>
+<text x="56.0" y="218" font-size="15.5" fill="#1e293b" text-anchor="start">settings answer different</text>
+<text x="56.0" y="239" font-size="15.5" fill="#1e293b" text-anchor="start">questions.</text>
+<line x1="399.3" y1="185.5" x2="411.3" y2="185.5" stroke="#64748b" stroke-width="2.5"/>
+<polygon points="405.3,180.5 411.3,185.5 405.3,190.5" fill="#64748b"/>
+<rect x="413.3" y="90.0" width="357.3" height="191" rx="10" fill="#f0fdfa" stroke="#99f6e4" stroke-width="1.5"/>
+<rect x="413.3" y="90.0" width="357.3" height="36" rx="10" fill="#0d9488"/>
+<text x="429.3333333333333" y="114" font-size="16.5" font-weight="700" fill="#ffffff" text-anchor="start">Compute and execution</text>
+<text x="429.3333333333333" y="150" font-size="15.5" fill="#1e293b" text-anchor="start">Record hardware, precision, input</text>
+<text x="429.3333333333333" y="171" font-size="15.5" fill="#1e293b" text-anchor="start">views, horizon and denoising</text>
+<text x="429.3333333333333" y="192" font-size="15.5" fill="#1e293b" text-anchor="start">steps.</text>
+<text x="429.3333333333333" y="218" font-size="15.5" fill="#1e293b" text-anchor="start">Distinguish inference latency from</text>
+<text x="429.3333333333333" y="239" font-size="15.5" fill="#1e293b" text-anchor="start">servo frequency.</text>
+<line x1="772.7" y1="185.5" x2="784.7" y2="185.5" stroke="#64748b" stroke-width="2.5"/>
+<polygon points="778.7,180.5 784.7,185.5 778.7,190.5" fill="#64748b"/>
+<rect x="786.7" y="90.0" width="357.3" height="191" rx="10" fill="#f5f3ff" stroke="#ddd6fe" stroke-width="1.5"/>
+<rect x="786.7" y="90.0" width="357.3" height="36" rx="10" fill="#7c3aed"/>
+<text x="802.6666666666666" y="114" font-size="16.5" font-weight="700" fill="#ffffff" text-anchor="start">Trials and uncertainty</text>
+<text x="802.6666666666666" y="150" font-size="15.5" fill="#1e293b" text-anchor="start">Publish trial counts, seeds and</text>
+<text x="802.6666666666666" y="171" font-size="15.5" fill="#1e293b" text-anchor="start">success definitions.</text>
+<text x="802.6666666666666" y="197" font-size="15.5" fill="#1e293b" text-anchor="start">Use paired tests only with</text>
+<text x="802.6666666666666" y="218" font-size="15.5" fill="#1e293b" text-anchor="start">genuinely paired outcomes.</text>
+<text x="600" y="325" font-size="14" fill="#475569" text-anchor="middle">Use each original paper&#x27;s protocol. This repository&#x27;s synthetic labs cannot supply SOTA robot success rates.</text>
+</svg>

@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 545" width="100%" height="100%" font-family="Arial, sans-serif">
+<rect width="1200" height="100%" fill="#FFFFFF"/>
+<text x="600" y="36" font-size="23" font-weight="700" fill="#0f172a" text-anchor="middle">Lab 1: knowledge-insulation gradient routing</text>
+<text x="600" y="64" font-size="14.5" fill="#475569" text-anchor="middle">SYNTHETIC TEACHING DIAGRAM - not a semantic-retention or robot benchmark</text>
+<rect x="40" y="84" width="1120" height="170" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+<text x="60" y="110" font-size="16" font-weight="700" fill="#0f172a" text-anchor="start">Computational Graph: Knowledge Insulation (stop_gradient on VLM Hidden Features)</text>
+<rect x="65" y="132" width="220" height="96" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+<text x="175" y="168" font-size="16" font-weight="700" fill="#1e40af" text-anchor="middle">VLM Backbone</text>
+<text x="175" y="192" font-size="14" fill="#334155" text-anchor="middle">Shared Hidden h</text>
+<text x="175" y="212" font-size="13" fill="#64748b" text-anchor="middle">theta_VLM</text>
+<line x1="285" y1="158" x2="430" y2="152" stroke="#059669" stroke-width="2.5"/>
+<polygon points="424,147 434,152 424,157" fill="#059669"/>
+<text x="358" y="144" font-size="12.5" font-weight="700" fill="#059669" text-anchor="middle">dL_aux / dh (flows)</text>
+<rect x="435" y="124" width="255" height="52" rx="7" fill="#ecfdf5" stroke="#10b981" stroke-width="1.5"/>
+<text x="562" y="147" font-size="14.5" font-weight="700" fill="#065f46" text-anchor="middle">Discrete Token Head (L_aux)</text>
+<text x="562" y="166" font-size="12.5" fill="#047857" text-anchor="middle">Semantic / FAST supervision</text>
+<line x1="285" y1="202" x2="365" y2="208" stroke="#e11d48" stroke-width="2.5" stroke-dasharray="5,3"/>
+<rect x="365" y="190" width="96" height="36" rx="6" fill="#fff1f2" stroke="#e11d48" stroke-width="2"/>
+<text x="413" y="213" font-size="13.5" font-weight="700" fill="#be123c" text-anchor="middle">h.detach()</text>
+<line x1="461" y1="208" x2="495" y2="208" stroke="#2563eb" stroke-width="2.5"/>
+<polygon points="489,203 499,208 489,213" fill="#2563eb"/>
+<rect x="500" y="186" width="245" height="52" rx="7" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.5"/>
+<text x="622" y="208" font-size="14.5" font-weight="700" fill="#1e40af" text-anchor="middle">Flow Action Expert (L_flow)</text>
+<text x="622" y="227" font-size="12.5" fill="#1d4ed8" text-anchor="middle">Updates expert; blocked at h</text>
+<rect x="775" y="114" width="365" height="122" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+<text x="957" y="138" font-size="15" font-weight="700" fill="#0f172a" text-anchor="middle">Synthetic Gradient Routing Check</text>
+<text x="795" y="166" font-size="13.5" font-weight="700" fill="#059669" text-anchor="start">With stop_gradient:</text>
+<rect x="945" y="153" width="8" height="16" fill="#059669"/>
+<text x="962" y="166" font-size="13" fill="#065f46" text-anchor="start">||grad_joint - grad_aux|| = 0.000</text>
+<text x="795" y="198" font-size="13.5" font-weight="700" fill="#e11d48" text-anchor="start">Without detach:</text>
+<rect x="945" y="185" width="140" height="16" rx="3" fill="#e11d48"/>
+<text x="945" y="222" font-size="13" fill="#be123c" text-anchor="start">Flow loss perturbs backbone (&gt; 0)</text>
+<rect x="40.0" y="272.0" width="357.3" height="191" rx="10" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.5"/>
+<rect x="40.0" y="272.0" width="357.3" height="36" rx="10" fill="#2563eb"/>
+<text x="56.0" y="296" font-size="16.5" font-weight="700" fill="#ffffff" text-anchor="start">Auxiliary token objective</text>
+<text x="56.0" y="332" font-size="15.5" fill="#1e293b" text-anchor="start">Random labels provide an auxiliary</text>
+<text x="56.0" y="353" font-size="15.5" fill="#1e293b" text-anchor="start">loss.</text>
+<text x="56.0" y="379" font-size="15.5" fill="#1e293b" text-anchor="start">Its gradient still reaches the</text>
+<text x="56.0" y="400" font-size="15.5" fill="#1e293b" text-anchor="start">backbone.</text>
+<rect x="413.3" y="272.0" width="357.3" height="191" rx="10" fill="#f0fdfa" stroke="#99f6e4" stroke-width="1.5"/>
+<rect x="413.3" y="272.0" width="357.3" height="36" rx="10" fill="#0d9488"/>
+<text x="429.3333333333333" y="296" font-size="16.5" font-weight="700" fill="#ffffff" text-anchor="start">Continuous flow objective</text>
+<text x="429.3333333333333" y="332" font-size="15.5" fill="#1e293b" text-anchor="start">Detached hidden features block</text>
+<text x="429.3333333333333" y="353" font-size="15.5" fill="#1e293b" text-anchor="start">only this loss from the backbone.</text>
+<text x="429.3333333333333" y="379" font-size="15.5" fill="#1e293b" text-anchor="start">The action expert remains</text>
+<text x="429.3333333333333" y="400" font-size="15.5" fill="#1e293b" text-anchor="start">trainable.</text>
+<rect x="786.7" y="272.0" width="357.3" height="191" rx="10" fill="#f5f3ff" stroke="#ddd6fe" stroke-width="1.5"/>
+<rect x="786.7" y="272.0" width="357.3" height="36" rx="10" fill="#7c3aed"/>
+<text x="802.6666666666666" y="296" font-size="16.5" font-weight="700" fill="#ffffff" text-anchor="start">Checks in the script</text>
+<text x="802.6666666666666" y="332" font-size="15.5" fill="#1e293b" text-anchor="start">Joint backbone gradient equals</text>
+<text x="802.6666666666666" y="353" font-size="15.5" fill="#1e293b" text-anchor="start">auxiliary gradient with</text>
+<text x="802.6666666666666" y="374" font-size="15.5" fill="#1e293b" text-anchor="start">insulation.</text>
+<text x="802.6666666666666" y="400" font-size="15.5" fill="#1e293b" text-anchor="start">Latency is measured locally, not</text>
+<text x="802.6666666666666" y="421" font-size="15.5" fill="#1e293b" text-anchor="start">copied from a paper.</text>
+<text x="600" y="507" font-size="14" fill="#475569" text-anchor="middle">Source: labs/lab1_openpi_ki_and_latency_profiler.py. No fixed cosine-retention or pretrained-model latency claim.</text>
+</svg>

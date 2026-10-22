@@ -1,0 +1,24 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Pytest / coverage
+.pytest_cache/
+.coverage
+
+# Environments
+.env
+.venv
+env/
+venv/
+
+# OS & Editor metadata
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Keep root clean; canonical sync script lives in tools/sync_and_push_all.ps1
+/sync_and_push_all.ps1
+.licenses/

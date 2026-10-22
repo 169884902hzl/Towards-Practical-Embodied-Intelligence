@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480" width="100%" height="100%" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <rect width="1200" height="480" fill="#FFFFFF"/>
+
+  <!-- Header -->
+  <text x="600" y="36" text-anchor="middle" font-size="20" font-weight="800" fill="#0f172a">Open-Source Reproducibility Boundary of the pi Ecosystem (openpi vs. Closed Frontier)</text>
+  <text x="600" y="58" text-anchor="middle" font-size="13" fill="#475569">Strict Audit of Publicly Available Weights, Algorithms You Can Implement Today, and Closed-Source Proprietary Components</text>
+
+  <!-- Column 1 (Emerald): Fully Open-Source Weights & Code -->
+  <rect x="30" y="82" width="366" height="365" rx="10" fill="#ecfdf5" stroke="#10b981" stroke-width="2"/>
+  <rect x="30" y="82" width="366" height="38" rx="10" fill="#059669"/>
+  <text x="213" y="106" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">[Verified Open] Weights &amp; Code (openpi / LeRobot)</text>
+
+  <rect x="46" y="134" width="334" height="295" rx="7" fill="#ffffff" stroke="#a7f3d0"/>
+  <text x="60" y="158" font-size="11.5" font-weight="700" fill="#065f46">1. Pretrained Base Checkpoints (Apache-2.0):</text>
+  <text x="70" y="178" font-size="10.5" fill="#334155">• pi_0_base &amp; pi_0_fast_base (10,000+ hrs pretraining)</text>
+  <text x="70" y="196" font-size="10.5" fill="#334155">• pi_0.5_base &amp; pi_0.5_droid / pi_0.5_libero weights</text>
+  <text x="70" y="214" font-size="10.5" fill="#334155">• Native JAX + PyTorch implementations in openpi</text>
+  
+  <text x="60" y="242" font-size="11.5" font-weight="700" fill="#065f46">2. Fast Action Tokenizer (fast):</text>
+  <text x="70" y="262" font-size="10.5" fill="#334155">• HuggingFace Hub: physical-intelligence/fast</text>
+  <text x="70" y="280" font-size="10.5" fill="#334155">• Fit custom DCT+BPE tokenizers on any robot dataset</text>
+
+  <text x="60" y="308" font-size="11.5" font-weight="700" fill="#065f46">3. Fine-Tuning &amp; Normalization Pipeline:</text>
+  <text x="70" y="328" font-size="10.5" fill="#334155">• Quantile [q_01, q_99] action normalization</text>
+  <text x="70" y="346" font-size="10.5" fill="#334155">• LoRA &amp; full-parameter fine-tuning on single 24GB GPU</text>
+  <text x="70" y="364" font-size="10.5" fill="#334155">• Full HuggingFace LeRobot v3 integration</text>
+  <text x="60" y="395" font-size="11" font-weight="700" fill="#059669">Status: Ready for immediate lab baseline deployment</text>
+
+  <!-- Column 2 (Blue): Open Mathematical Recipes (Implemented in Our Labs!) -->
+  <rect x="417" y="82" width="366" height="365" rx="10" fill="#eff6ff" stroke="#3b82f6" stroke-width="2"/>
+  <rect x="417" y="82" width="366" height="38" rx="10" fill="#2563eb"/>
+  <text x="600" y="106" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">[Reproducible Math] Implemented in Our Code Labs</text>
+
+  <rect x="433" y="134" width="334" height="295" rx="7" fill="#ffffff" stroke="#bfdbfe"/>
+  <text x="447" y="158" font-size="11.5" font-weight="700" fill="#1e40af">1. Knowledge Insulation (KI, arXiv:2505.23705):</text>
+  <text x="457" y="178" font-size="10.5" fill="#334155">• 1-line PyTorch: kv_detached = [k.detach() for k in kv]</text>
+  <text x="457" y="196" font-size="10.5" font-weight="600" fill="#1d4ed8">• Verified in: labs/lab1_openpi_ki_and_latency_profiler.py</text>
+
+  <text x="447" y="224" font-size="11.5" font-weight="700" fill="#1e40af">2. Real-Time Chunking (RTC, arXiv:2506.07339):</text>
+  <text x="457" y="244" font-size="10.5" fill="#334155">• Committed prefix a_{0:d} + soft mask W_i = c_i(e^{c_i}-1)/(e-1)</text>
+  <text x="457" y="262" font-size="10.5" font-weight="600" fill="#1d4ed8">• Verified in: labs/lab2_rtc_soft_masked_inpainting.py</text>
+
+  <text x="447" y="290" font-size="11.5" font-weight="700" fill="#1e40af">3. Flow-RL Post-Training Mechanics (arXiv:2510.25889):</text>
+  <text x="457" y="310" font-size="10.5" fill="#334155">• Joint Gaussian suffix PPO + truncated Euler backprop</text>
+  <text x="457" y="328" font-size="10.5" fill="#334155">• Open-source RLinf-VLA / pi_RL / DSRL / ReinFlow</text>
+  <text x="457" y="346" font-size="10.5" font-weight="600" fill="#1d4ed8">• Verified in: labs/lab4_final_step_gaussian_ppo_and_critic.py</text>
+  <text x="447" y="395" font-size="11" font-weight="700" fill="#1e40af">Status: Self-contained synthetic PyTorch checks</text>
+
+  <!-- Column 3 (Amber): Closed-Source Proprietary Assets -->
+  <rect x="804" y="82" width="366" height="365" rx="10" fill="#fffbeb" stroke="#f59e0b" stroke-width="2"/>
+  <rect x="804" y="82" width="366" height="38" rx="10" fill="#d97706"/>
+  <text x="987" y="106" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">[Closed Frontier] Proprietary Weights &amp; Data</text>
+
+  <rect x="820" y="134" width="334" height="295" rx="7" fill="#ffffff" stroke="#fde68a"/>
+  <text x="834" y="158" font-size="11.5" font-weight="700" fill="#92400e">1. Proprietary 10,000h–20,000h Raw Robot Corpus:</text>
+  <text x="844" y="178" font-size="10.5" fill="#334155">• Internal mobile bimanual &amp; laundry fleet logs are private.</text>
+  <text x="844" y="196" font-size="10.5" font-weight="600" fill="#059669">• Open Alternative: Open X + DROID + AgiBot World (1M+)</text>
+
+  <text x="834" y="224" font-size="11.5" font-weight="700" fill="#92400e">2. pi*_{0.6} (860M) &amp; pi_{0.7} Pretrained Weights:</text>
+  <text x="844" y="244" font-size="10.5" fill="#334155">• Gemma 3-4B + 860M Action Expert weights not yet public.</text>
+  <text x="844" y="262" font-size="10.5" font-weight="600" fill="#059669">• Open Alternative: Qwen-RobotManip / REKI / GR00T N1.5</text>
+
+  <text x="834" y="290" font-size="11.5" font-weight="700" fill="#92400e">3. pi_{0.7} 14B Visual Subgoal Generator:</text>
+  <text x="844" y="310" font-size="10.5" fill="#334155">• Internal 14B image/video subgoal generator is closed.</text>
+  <text x="844" y="328" font-size="10.5" font-weight="600" fill="#059669">• Open Alternative: OpenWAM (arXiv:2610.07922),</text>
+  <text x="854" y="346" font-size="10.5" font-weight="600" fill="#059669">Fast-WAM (2603.16666), Wan2.1-14B / Cosmos-Predict2</text>
+  <text x="834" y="395" font-size="11" font-weight="700" fill="#b45309">Status: Replaceable via open 2026 WAM/VLA stack</text>
+</svg>

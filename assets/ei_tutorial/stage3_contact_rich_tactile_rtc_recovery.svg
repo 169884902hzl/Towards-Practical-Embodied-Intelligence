@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 534" width="100%" height="100%" font-family="Arial, sans-serif">
+<rect width="1200" height="100%" fill="#FFFFFF"/>
+<text x="600" y="36" font-size="23" font-weight="700" fill="#0f172a" text-anchor="middle">Contact-rich manipulation: perception, execution and verification</text>
+<text x="600" y="64" font-size="14.5" fill="#475569" text-anchor="middle">Public-paper concepts; no unpublished project design or claimed new method</text>
+<rect x="40.0" y="90.0" width="544.0" height="172" rx="10" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.5"/>
+<rect x="40.0" y="90.0" width="544.0" height="36" rx="10" fill="#2563eb"/>
+<text x="56.0" y="114" font-size="16.5" font-weight="700" fill="#ffffff" text-anchor="start">1. Tactile representation</text>
+<text x="56.0" y="150" font-size="15.5" fill="#1e293b" text-anchor="start">T3 / Sparsh / UniTouch study transferable</text>
+<text x="56.0" y="171" font-size="15.5" fill="#1e293b" text-anchor="start">representations.</text>
+<text x="56.0" y="197" font-size="15.5" fill="#1e293b" text-anchor="start">A token count or stiffness output must be checked per</text>
+<text x="56.0" y="218" font-size="15.5" fill="#1e293b" text-anchor="start">implementation.</text>
+<rect x="600.0" y="90.0" width="544.0" height="172" rx="10" fill="#f0fdfa" stroke="#99f6e4" stroke-width="1.5"/>
+<rect x="600.0" y="90.0" width="544.0" height="36" rx="10" fill="#0d9488"/>
+<text x="616.0" y="114" font-size="16.5" font-weight="700" fill="#ffffff" text-anchor="start">2. Reactive policies</text>
+<text x="616.0" y="150" font-size="15.5" fill="#1e293b" text-anchor="start">RDP and tactile policies study reactive sensor fusion.</text>
+<text x="616.0" y="176" font-size="15.5" fill="#1e293b" text-anchor="start">A generic two-rate teaching model is not a reproduction</text>
+<text x="616.0" y="197" font-size="15.5" fill="#1e293b" text-anchor="start">of these methods.</text>
+<rect x="40.0" y="280.0" width="544.0" height="172" rx="10" fill="#f5f3ff" stroke="#ddd6fe" stroke-width="1.5"/>
+<rect x="40.0" y="280.0" width="544.0" height="36" rx="10" fill="#7c3aed"/>
+<text x="56.0" y="304" font-size="16.5" font-weight="700" fill="#ffffff" text-anchor="start">3. RTC execution</text>
+<text x="56.0" y="340" font-size="15.5" fill="#1e293b" text-anchor="start">Black et al.: committed prefix and clipped inpainting</text>
+<text x="56.0" y="361" font-size="15.5" fill="#1e293b" text-anchor="start">guidance.</text>
+<text x="56.0" y="387" font-size="15.5" fill="#1e293b" text-anchor="start">Training-time conditioning is a separate follow-up</text>
+<text x="56.0" y="408" font-size="15.5" fill="#1e293b" text-anchor="start">approach.</text>
+<rect x="600.0" y="280.0" width="544.0" height="172" rx="10" fill="#fffbeb" stroke="#fde68a" stroke-width="1.5"/>
+<rect x="600.0" y="280.0" width="544.0" height="36" rx="10" fill="#d97706"/>
+<text x="616.0" y="304" font-size="16.5" font-weight="700" fill="#ffffff" text-anchor="start">4. Verification and recovery</text>
+<text x="616.0" y="340" font-size="15.5" fill="#1e293b" text-anchor="start">FAVOR: compare WAM observations with future anchors.</text>
+<text x="616.0" y="366" font-size="15.5" fill="#1e293b" text-anchor="start">DiVeR: decision-critical verification for test-time</text>
+<text x="616.0" y="387" font-size="15.5" fill="#1e293b" text-anchor="start">selection.</text>
+<text x="600" y="496" font-size="14" fill="#475569" text-anchor="middle">References: arXiv:2406.13640, 2506.07339, 2512.05964, 2610.06280, 2610.04933. No failure-aware-critic expansion of FAVOR.</text>
+</svg>

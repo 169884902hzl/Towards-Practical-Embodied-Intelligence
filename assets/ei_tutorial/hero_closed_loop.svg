@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="100%" height="100%" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <rect width="1200" height="600" fill="#FFFFFF"/>
+
+  <!-- Top Banner -->
+  <rect x="25" y="18" width="1150" height="58" rx="10" fill="#0f172a"/>
+  <text x="600" y="43" text-anchor="middle" font-size="20" font-weight="800" fill="#ffffff">Towards Practical Embodied Intelligence: Tri-Frequency Closed-Loop System Architecture</text>
+  <text x="600" y="64" text-anchor="middle" font-size="12.5" fill="#94a3b8">Unifying Multimodal Sensing, Foundation VLA/WAM Brains, Real-Time Flow Action Experts, 1kHz Compliant Control &amp; Online Recovery</text>
+
+  <!-- Left Column: Multi-Modal Observation & Self-Perception -->
+  <rect x="25" y="92" width="265" height="410" rx="10" fill="#f8fafc" stroke="#3b82f6" stroke-width="2"/>
+  <rect x="25" y="92" width="265" height="36" rx="10" fill="#2563eb"/>
+  <text x="157" y="115" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">1. Multimodal Observation o_t</text>
+
+  <rect x="40" y="142" width="235" height="82" rx="6" fill="#ffffff" stroke="#bfdbfe" stroke-width="1.5"/>
+  <text x="157" y="162" text-anchor="middle" font-size="11.5" font-weight="700" fill="#1e40af">Exteroceptive 2D/3D Vision (30 Hz)</text>
+  <text x="50" y="180" font-size="10.5" fill="#334155">• Third-person stereo RGB-D + Point Cloud</text>
+  <text x="50" y="196" font-size="10.5" fill="#334155">• Dual wrist eye-in-hand cameras</text>
+  <text x="50" y="212" font-size="10.5" fill="#334155">• 3D Gaussian Splatting / Ego3D grid</text>
+
+  <rect x="40" y="236" width="235" height="86" rx="6" fill="#ffffff" stroke="#bfdbfe" stroke-width="1.5"/>
+  <text x="157" y="256" text-anchor="middle" font-size="11.5" font-weight="700" fill="#1e40af">Visuotactile &amp; Force/Torque (100–1kHz)</text>
+  <text x="50" y="274" font-size="10.5" fill="#334155">• GelSight / ViTac fingertip shear array</text>
+  <text x="50" y="290" font-size="10.5" fill="#334155">• AnySkin magnetic tactile skin</text>
+  <text x="50" y="306" font-size="10.5" fill="#334155">• 6-Axis wrist F/T wrench F_ext in R^6</text>
+
+  <rect x="40" y="334" width="235" height="82" rx="6" fill="#ffffff" stroke="#bfdbfe" stroke-width="1.5"/>
+  <text x="157" y="354" text-anchor="middle" font-size="11.5" font-weight="700" fill="#1e40af">Proprioception &amp; Anti-Shortcut Gate</text>
+  <text x="50" y="372" font-size="10.5" fill="#334155">• Joint angles q_t, dq_t &amp; SE(3) pose T_ee</text>
+  <text x="50" y="388" font-size="10.5" fill="#334155">• GAP (ICLR 2026) information bottleneck</text>
+  <text x="50" y="404" font-size="10.5" fill="#1d4ed8" font-weight="600">• Prevents proprioceptive shortcut</text>
+
+  <rect x="40" y="428" width="235" height="60" rx="6" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.5"/>
+  <text x="157" y="448" text-anchor="middle" font-size="11.5" font-weight="700" fill="#1e3a8a">4-Channel Context Conditioning</text>
+  <text x="50" y="466" font-size="10.5" fill="#334155">Language l + Subgoal + Metadata c_t</text>
+  <text x="50" y="480" font-size="10" fill="#475569">(Embodiment ID, Speed, Quality Score)</text>
+
+  <!-- Arrow 1 -> 2 -->
+  <line x1="290" y1="295" x2="318" y2="295" stroke="#2563eb" stroke-width="3"/>
+  <polygon points="318,289 330,295 318,301" fill="#2563eb"/>
+
+  <!-- Center-Left Column: Slow Cognitive Brain (VLA / WAM) -->
+  <rect x="330" y="92" width="270" height="410" rx="10" fill="#f8fafc" stroke="#7c3aed" stroke-width="2"/>
+  <rect x="330" y="92" width="270" height="36" rx="10" fill="#7c3aed"/>
+  <text x="465" y="115" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">2. Cognitive Brain (1–10 Hz)</text>
+
+  <rect x="345" y="142" width="240" height="108" rx="6" fill="#ffffff" stroke="#ddd6fe" stroke-width="1.5"/>
+  <text x="465" y="162" text-anchor="middle" font-size="11.5" font-weight="700" fill="#5b21b6">VLM Multimodal Backbone (2B–7B)</text>
+  <text x="355" y="180" font-size="10.5" fill="#334155">• PaliGemma-3B / Gemma 3 (pi0 -&gt; pi0.7)</text>
+  <text x="355" y="196" font-size="10.5" fill="#334155">• Qwen-VL Alignment (Qwen-RobotManip)</text>
+  <text x="355" y="212" font-size="10.5" fill="#334155">• Persistent Expert-Cache Registers (REKI)</text>
+  <text x="355" y="230" font-size="10.5" font-weight="700" fill="#6d28d9">• Knowledge Insulation: kv_cache.detach()</text>
+
+  <rect x="345" y="262" width="240" height="108" rx="6" fill="#f5f3ff" stroke="#c4b5fd" stroke-width="1.5"/>
+  <text x="465" y="282" text-anchor="middle" font-size="11.5" font-weight="700" fill="#4c1d95">World Action Model (WAM) Priors</text>
+  <text x="355" y="300" font-size="10.5" fill="#334155">• Pretrained on 90% Ego Human Video +</text>
+  <text x="363" y="315" font-size="10" fill="#475569">9% Cross-Embodiment Robot Trajectories</text>
+  <text x="355" y="333" font-size="10.5" fill="#334155">• Fast-WAM / VLA-Delta (2026): Co-trains</text>
+  <text x="363" y="348" font-size="10" fill="#475569">latent dynamics; skips video denoising at</text>
+  <text x="363" y="362" font-size="10" font-weight="600" fill="#5b21b6">test time for zero latency overhead</text>
+
+  <rect x="345" y="382" width="240" height="106" rx="6" fill="#ffffff" stroke="#ddd6fe" stroke-width="1.5"/>
+  <text x="465" y="402" text-anchor="middle" font-size="11.5" font-weight="700" fill="#5b21b6">Online Verifier &amp; Failure Critic</text>
+  <text x="355" y="420" font-size="10.5" fill="#334155">• SAFE (2025): Internal feature probing</text>
+  <text x="355" y="436" font-size="10.5" fill="#334155">• FAVOR / DiVeR (2026): Future-anchor &amp;</text>
+  <text x="363" y="451" font-size="10" fill="#475569">decision-critical verification for recovery</text>
+  <text x="355" y="470" font-size="10.5" font-weight="700" fill="#059669">• Triggers closed-loop recovery subgoal</text>
+
+  <!-- Arrow 2 -> 3 -->
+  <line x1="600" y1="295" x2="628" y2="295" stroke="#7c3aed" stroke-width="3"/>
+  <polygon points="628,289 640,295 628,301" fill="#7c3aed"/>
+
+  <!-- Center-Right Column: Medium/Fast Flow Action Expert & RTC -->
+  <rect x="640" y="92" width="265" height="410" rx="10" fill="#f8fafc" stroke="#0d9488" stroke-width="2"/>
+  <rect x="640" y="92" width="265" height="36" rx="10" fill="#0d9488"/>
+  <text x="772" y="115" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">3. Flow Expert &amp; RTC (30–100 Hz)</text>
+
+  <rect x="655" y="142" width="235" height="105" rx="6" fill="#ffffff" stroke="#99f6e4" stroke-width="1.5"/>
+  <text x="772" y="162" text-anchor="middle" font-size="11.5" font-weight="700" fill="#0f766e">OT Flow Matching Action Expert</text>
+  <text x="665" y="180" font-size="10.5" fill="#334155">• 300M–860M DiT / Transformer Expert</text>
+  <text x="665" y="196" font-size="10.5" font-weight="600" fill="#0f766e">• Straight-line ODE vector field v_theta:</text>
+  <text x="673" y="212" font-size="10" fill="#334155">da_tau / dtau = v_theta(a_tau, tau | KV_VLM)</text>
+  <text x="665" y="230" font-size="10.5" fill="#334155">• Generates H=50 continuous action chunk</text>
+
+  <rect x="655" y="259" width="235" height="112" rx="6" fill="#f0fdfa" stroke="#5eead4" stroke-width="1.5"/>
+  <text x="772" y="279" text-anchor="middle" font-size="11.5" font-weight="700" fill="#115e59">Real-Time Chunking (RTC Inpainting)</text>
+  <text x="665" y="297" font-size="10.5" fill="#334155">• Locks committed prefix a_{0:d} during</text>
+  <text x="673" y="312" font-size="10" fill="#475569">asynchronous GPU inference delay d</text>
+  <text x="665" y="330" font-size="10.5" fill="#334155">• Clipped VJP soft-masked guidance</text>
+  <text x="673" y="345" font-size="10" font-weight="600" fill="#0f766e">W_i = c_i(e^{c_i}-1)/(e-1) smooths overlap</text>
+  <text x="665" y="362" font-size="10" fill="#047857" font-weight="700">• 100Hz Tactile Fast-Flow (1–3 steps)</text>
+
+  <rect x="655" y="383" width="235" height="105" rx="6" fill="#ffffff" stroke="#99f6e4" stroke-width="1.5"/>
+  <text x="772" y="403" text-anchor="middle" font-size="11.5" font-weight="700" fill="#0f766e">Online RL Post-Training (Top 1%)</text>
+  <text x="665" y="421" font-size="10.5" fill="#334155">• RECAP (pi*0.6): Advantage conditioning</text>
+  <text x="665" y="437" font-size="10.5" fill="#334155">• RL Token / ResFiT: 1M residual steering</text>
+  <text x="665" y="453" font-size="10.5" fill="#334155">• pi_RL / RLinf: Final-step Gaussian PPO</text>
+  <text x="665" y="471" font-size="10.5" font-weight="700" fill="#059669">• Breaks imitation learning ceiling</text>
+
+  <!-- Arrow 3 -> 4 -->
+  <line x1="905" y1="295" x2="933" y2="295" stroke="#0d9488" stroke-width="3"/>
+  <polygon points="933,289 945,295 933,301" fill="#0d9488"/>
+
+  <!-- Right Column: 1kHz Physical Control & Broad Embodied Domains -->
+  <rect x="945" y="92" width="230" height="410" rx="10" fill="#f8fafc" stroke="#059669" stroke-width="2"/>
+  <rect x="945" y="92" width="230" height="36" rx="10" fill="#059669"/>
+  <text x="1060" y="115" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">4. Physical World (1 kHz)</text>
+
+  <rect x="958" y="142" width="204" height="90" rx="6" fill="#ffffff" stroke="#a7f3d0" stroke-width="1.5"/>
+  <text x="1060" y="160" text-anchor="middle" font-size="11.5" font-weight="700" fill="#065f46">1kHz Compliant Control</text>
+  <text x="966" y="178" font-size="10" fill="#334155">• Cartesian Impedance (K_p, K_d)</text>
+  <text x="966" y="194" font-size="10" fill="#334155">• Hybrid Force-Position Projection</text>
+  <text x="966" y="210" font-size="10" fill="#334155">• Whole-Body QP / Torque Control</text>
+
+  <rect x="958" y="244" width="204" height="244" rx="6" fill="#ecfdf5" stroke="#6ee7b7" stroke-width="1.5"/>
+  <text x="1060" y="264" text-anchor="middle" font-size="11.5" font-weight="700" fill="#064e3b">Generalist Embodied Domains</text>
+
+  <rect x="968" y="276" width="184" height="44" rx="4" fill="#ffffff" stroke="#a7f3d0"/>
+  <text x="1060" y="293" text-anchor="middle" font-size="10.5" font-weight="700" fill="#065f46">A. Contact-Rich Assembly</text>
+  <text x="1060" y="309" text-anchor="middle" font-size="9.5" fill="#334155">Sub-mm peg-in-hole, PCB, snap-fit</text>
+
+  <rect x="968" y="328" width="184" height="44" rx="4" fill="#ffffff" stroke="#a7f3d0"/>
+  <text x="1060" y="345" text-anchor="middle" font-size="10.5" font-weight="700" fill="#065f46">B. Deformable &amp; Bimanual</text>
+  <text x="1060" y="361" text-anchor="middle" font-size="9.5" fill="#334155">Cloth folding, DLO cable harnessing</text>
+
+  <rect x="968" y="380" width="184" height="44" rx="4" fill="#ffffff" stroke="#a7f3d0"/>
+  <text x="1060" y="397" text-anchor="middle" font-size="10.5" font-weight="700" fill="#065f46">C. High-DoF Dexterous Hands</text>
+  <text x="1060" y="413" text-anchor="middle" font-size="9.5" fill="#334155">20+ DoF in-hand tool manipulation</text>
+
+  <rect x="968" y="432" width="184" height="44" rx="4" fill="#ffffff" stroke="#a7f3d0"/>
+  <text x="1060" y="449" text-anchor="middle" font-size="10.5" font-weight="700" fill="#065f46">D. Humanoid Loco-Manipulation</text>
+  <text x="1060" y="465" text-anchor="middle" font-size="9.5" fill="#334155">Mobile bimanual &amp; whole-body agility</text>
+
+  <!-- Bottom Feedback Loop Arrow from Column 4 back to Column 1 -->
+  <path d="M 1060,502 L 1060,555 L 157,555 L 157,508" fill="none" stroke="#0f172a" stroke-width="2.8"/>
+  <polygon points="151,512 157,500 163,512" fill="#0f172a"/>
+  <rect x="330" y="536" width="540" height="34" rx="17" fill="#0f172a"/>
+  <text x="600" y="558" text-anchor="middle" font-size="12" font-weight="700" fill="#38bdf8">Physical Environment State Transition s_{t+1} ~ P( . | s_t, a_t ) &amp; Real-Time Sensor Feedback</text>
+</svg>

@@ -1,0 +1,2 @@
+# CPU verification baseline: Python 3.11; install from the official CPU wheel index.
+torch==2.9.0
